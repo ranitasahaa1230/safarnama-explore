@@ -5,21 +5,21 @@ import "./Navbar.css";
 export const Navbar = () => {
   return (
     <nav>
-      <div class="container">
-        <h2 class="log">TALK IT OUT</h2>
-        <div class="search-bar">
-          <i class="uil uil-search"></i>
+      <div className="container">
+        <h2 className="log">TALK IT OUT</h2>
+        <div className="search-bar">
+          <i className="uil uil-search"></i>
           <input
             type="search"
             placeholder="Search for inspirations and projects"
           />
         </div>
-        <div class="create">
-          <label for="create-post" class="btn btn-primary">
+        <div className="create">
+          <label for="create-post" className="btn btn-primary">
             Create
           </label>
-          <div class="profile-photo">
-            <img src={profile4} />
+          <div className="profile-photo">
+            <img src={profile4} alt="profile-pic"/>
           </div>
         </div>
       </div>

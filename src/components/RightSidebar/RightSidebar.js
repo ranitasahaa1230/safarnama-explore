@@ -14,14 +14,14 @@ import "./RightSidebar.css";
 
 export const RightSidebar = () => {
   return (
-    <div class="right">
-      <div class="follow">
-        <div class="heading">
+    <div className="right">
+      <div className="follow">
+        <div className="heading">
           <h4>Who To Follow</h4>
         </div>
 
-        <div class="search-bar">
-          <i class="uil uil-search"></i>
+        <div className="search-bar">
+          <i className="uil uil-search"></i>
           <input
             type="search"
             placeholder="Enter username"
@@ -29,128 +29,128 @@ export const RightSidebar = () => {
           />
         </div>
 
-        <div class="follow-request">
-          <div class="profile-photo">
-            <img src={profile10} />
+        <div className="follow-request">
+          <div className="profile-photo">
+            <img src={profile10} alt="profile-pic"/>
           </div>
-          <div class="message-body">
+          <div className="message-body">
             <h5>Ede Quitt</h5>
-            <p class="text-muted">@edeQuitt45</p>
+            <p className="text-muted">@edeQuitt45</p>
           </div>
-          <button class="btn btn-follow">Follow</button>
+          <button className="btn btn-follow">Follow</button>
         </div>
 
-        <div class="follow-request">
-          <div class="profile-photo">
-            <img src={profile11} />
+        <div className="follow-request">
+          <div className="profile-photo">
+            <img src={profile11} alt="profile-pic"/>
           </div>
-          <div class="message-body">
+          <div className="message-body">
             <h5>Rohan Dubey</h5>
-            <p class="text-muted">@dubeyRoh</p>
+            <p className="text-muted">@dubeyRoh</p>
           </div>
-          <button class="btn btn-follow">Follow</button>
+          <button className="btn btn-follow">Follow</button>
         </div>
 
-        <div class="follow-request">
-          <div class="profile-photo">
-            <img src={profile3} />
+        <div className="follow-request">
+          <div className="profile-photo">
+            <img src={profile3} alt="profile-pic"/>
           </div>
-          <div class="message-body">
+          <div className="message-body">
             <h5>Nidhi Vasa</h5>
-            <p class="text-muted">@nidhivasaa</p>
+            <p className="text-muted">@nidhivasaa</p>
           </div>
-          <button class="btn btn-follow">Follow</button>
+          <button className="btn btn-follow">Follow</button>
         </div>
 
-        <div class="follow-request">
-          <div class="profile-photo">
-            <img src={profile1} />
+        <div className="follow-request">
+          <div className="profile-photo">
+            <img src={profile1} alt="profile-pic"/>
           </div>
-          <div class="message-body">
+          <div className="message-body">
             <h5>Aryanii T</h5>
-            <p class="text-muted">@aryantri123</p>
+            <p className="text-muted">@aryantri123</p>
           </div>
-          <button class="btn btn-follow">Follow</button>
+          <button className="btn btn-follow">Follow</button>
         </div>
 
-        <div class="follow-request">
-          <div class="profile-photo">
-            <img src={profile5} />
+        <div className="follow-request">
+          <div className="profile-photo">
+            <img src={profile5} alt="profile-pic"/>
           </div>
-          <div class="message-body">
+          <div className="message-body">
             <h5>Ishita Verma</h5>
-            <p class="text-muted">@Kishita</p>
+            <p className="text-muted">@Kishita</p>
           </div>
-          <button class="btn btn-follow">Follow</button>
+          <button className="btn btn-follow">Follow</button>
         </div>
 
-        <div class="follow-request">
-          <div class="profile-photo">
-            <img src={profile6} />
+        <div className="follow-request">
+          <div className="profile-photo">
+            <img src={profile6} alt="profile-pic"/>
           </div>
-          <div class="message-body">
+          <div className="message-body">
             <h5>Ria Singh</h5>
-            <p class="text-muted">@riasinghh145</p>
+            <p className="text-muted">@riasinghh145</p>
           </div>
-          <button class="btn btn-follow">Follow</button>
+          <button className="btn btn-follow">Follow</button>
         </div>
 
-        <div class="follow-request">
-          <div class="profile-photo">
-            <img src={profile9} />
+        <div className="follow-request">
+          <div className="profile-photo">
+            <img src={profile9} alt="profile-pic"/>
           </div>
-          <div class="message-body">
+          <div className="message-body">
             <h5>Keshav Tarak</h5>
-            <p class="text-muted">@keshavtarak</p>
+            <p className="text-muted">@keshavtarak</p>
           </div>
-          <button class="btn btn-follow">Follow</button>
+          <button className="btn btn-follow">Follow</button>
         </div>
 
-        <div class="follow-request">
-          <div class="profile-photo">
-            <img src={profile7} />
+        <div className="follow-request">
+          <div className="profile-photo">
+            <img src={profile7} alt="profile-pic"/>
           </div>
-          <div class="message-body">
+          <div className="message-body">
             <h5>Manoj S</h5>
-            <p class="text-muted">@manojpaaji</p>
+            <p className="text-muted">@manojpaaji</p>
           </div>
-          <button class="btn btn-follow">Follow</button>
+          <button className="btn btn-follow">Follow</button>
         </div>
       </div>
 
-      <div class="friend-requests">
+      <div className="friend-requests">
         <h4>Requests</h4>
-        <div class="request">
-          <div class="info">
-            <div class="profile-photo">
-              <img src={profile6} />
+        <div className="request">
+          <div className="info">
+            <div className="profile-photo">
+              <img src={profile6} alt="profile-pic"/>
             </div>
 
             <div>
               <h5>Ria Singh</h5>
-              <p class="text-muted">8 mutual friends</p>
+              <p className="text-muted">8 mutual friends</p>
             </div>
           </div>
 
-          <div class="action">
-            <button class="btn btn-primary">Accept</button>
-            <button class="btn">Decline</button>
+          <div className="action">
+            <button className="btn btn-primary">Accept</button>
+            <button className="btn">Decline</button>
           </div>
 
-          <div class="info">
-            <div class="profile-photo">
-              <img src={profile8} />
+          <div className="info">
+            <div className="profile-photo">
+              <img src={profile8} alt="profile-pic"/>
             </div>
 
             <div>
               <h5>Rohan Singh</h5>
-              <p class="text-muted">18 mutual friends</p>
+              <p className="text-muted">18 mutual friends</p>
             </div>
           </div>
 
-          <div class="action">
-            <button class="btn btn-primary">Accept</button>
-            <button class="btn">Decline</button>
+          <div className="action">
+            <button className="btn btn-primary">Accept</button>
+            <button className="btn">Decline</button>
           </div>
         </div>
       </div>

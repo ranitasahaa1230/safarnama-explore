@@ -4,51 +4,51 @@ import "./LeftSidebar.css";
 
 export const LeftSidebar = () => {
   return (
-    <div class="left">
-      <a class="profile">
-        <div class="profile-photo">
-          <img src={profile4} />
+    <div className="left">
+      <a href="" className="profile">
+        <div className="profile-photo">
+          <img src={profile4} alt="profile-pic" />
         </div>
-        <div class="handle">
-          <h4 class="">Ranita Saha</h4>
-          <p class="text-muted">@Ifullofsunshine</p>
+        <div className="handle">
+          <h4 className="">Ranita Saha</h4>
+          <p className="text-muted">@Ifullofsunshine</p>
         </div>
       </a>
 
-      <div class="sidebar">
-        <a class="menu-item active">
+      <div className="sidebar">
+        <a href="" className="menu-item active">
           <span>
-            <i class="uil uil-home"></i>
+            <i className="uil uil-home"></i>
           </span>
           <h3>Home</h3>
         </a>
-        <a class="menu-item">
+        <a href="" className="menu-item">
           <span>
-            <i class="uil uil-compass"></i>
+            <i className="uil uil-compass"></i>
           </span>
           <h3>Explore</h3>
         </a>
 
-        <a class="menu-item">
+        <a href="" className="menu-item">
           <span>
-            <i class="uil uil-bookmark"></i>
+            <i className="uil uil-bookmark"></i>
           </span>
           <h3>Bookmarks</h3>
         </a>
 
-        {/* <a class="menu-item" id="theme">
-              <span><i class="uil uil-palette"></i></span>
+        {/* <a className="menu-item" id="theme">
+              <span><i className="uil uil-palette"></i></span>
               <h3>Theme</h3>
             </a> */}
-        <a class="menu-item">
+        <a href="" className="menu-item">
           <span>
-            <i class="uil uil-account"></i>
+            <i className="uil uil-account"></i>
           </span>
           <h3>Profile</h3>
         </a>
       </div>
 
-      <label for="create-post" class="btn btn-primary">
+      <label for="create-post" className="btn btn-primary">
         Create Post
       </label>
     </div>

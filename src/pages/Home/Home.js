@@ -5,7 +5,7 @@ import "./Home.css";
 export const Home = () => {
   return (
     <main>
-      <div class="container">
+      <div className="container">
         <LeftSidebar />
         <MiddleGrid />
         <RightSidebar />
