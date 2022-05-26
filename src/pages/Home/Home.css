@@ -1,0 +1,27 @@
+main {
+  position: relative;
+  top: 5.4rem;
+}
+
+main .container {
+  display: grid;
+  grid-template-columns: 18vw auto 20vw;
+  column-gap: 2rem;
+  position: relative;
+}
+
+main .container .left {
+  height: max-content;
+  position: sticky;
+  top: var(--sticky-top-left);
+}
+
+main .container .left .profile {
+  padding: var(--card-padding);
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  width: 100%;
+}

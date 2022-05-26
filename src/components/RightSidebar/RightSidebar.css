@@ -1,0 +1,90 @@
+main .container .right {
+  height: max-content;
+  position: sticky;
+  top: var(--sticky-top-right);
+  bottom: 0;
+}
+
+.right .follow {
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+}
+.right .follow .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right .follow i {
+  font-size: 1.4rem;
+}
+
+.right .follow .search-bar {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.right .follow .follow-request {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: start;
+}
+
+.right .follow-request .profile-photo {
+  position: relative;
+  overflow: visible;
+}
+
+.right .profile-photo img {
+  border-radius: 50%;
+}
+.right .follow .follow-request:last-child {
+  margin: 0;
+}
+
+.right .follow .follow-request p {
+  font-size: 0.8rem;
+}
+
+.right .follow .follow-request .profile-photo .active {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+  background: var(--color-success);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.btn-follow {
+  background: var(--color-primary);
+  color: white;
+  gap: 1rem;
+}
+.right .friend-requests {
+  color: var(--color-gray);
+  margin: 1rem 0;
+}
+
+.right .request {
+  background-color: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-bottom: 0.7rem;
+}
+
+.right .request .info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.right .request .action {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
