@@ -31,7 +31,7 @@ main .container .right {
   justify-content: space-evenly;
   gap: 1rem;
   margin-bottom: 1rem;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .right .follow-request .profile-photo {
