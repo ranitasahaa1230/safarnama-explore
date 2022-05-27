@@ -10,7 +10,7 @@
 }
 
 .middle .create-post input[type="text"] {
-  justify-self: start;
+  justify-self: flex-start;
   width: 100%;
   padding-left: 1rem;
   background-color: transparent;
