@@ -4,7 +4,7 @@ import {
   feed2,
   feed5,
   feed6,
-//   feed7,
+  //   feed7,
   profile1,
   profile13,
   profile3,
@@ -27,7 +27,7 @@ export const MiddleGrid = () => {
     <div className="middle">
       <form action="" className="create-post">
         <div className="profile-photo">
-          <img src={profile1} alt="profile-pic"/>
+          <img src={profile1} alt="profile-pic" />
         </div>
         <input
           type="text"
@@ -42,7 +42,7 @@ export const MiddleGrid = () => {
           <div className="head">
             <div className="user">
               <div className="profile-photo">
-                <img src={profile13} alt="profile-pic"/>
+                <img src={profile13} alt="profile-pic" />
               </div>
               <div className="ingo">
                 <h3>Lana Rose</h3>
@@ -54,13 +54,13 @@ export const MiddleGrid = () => {
             </span>
           </div>
           <div className="photo">
-            <img src={feed2} alt="profile-pic"/>
+            <img src={feed2} alt="profile-pic" />
           </div>
 
           <div className="action-button">
             <div className="interaction-buttons">
               <span>
-                <i className="uil uil-heart"></i>
+                <i className="fa-solid fa-heart"></i>{" "}
               </span>
               <span>
                 <i className="uil uil-comment-dots"></i>
@@ -78,13 +78,13 @@ export const MiddleGrid = () => {
 
           <div className="liked-by">
             <span>
-              <img src={profile4} alt="profile-pic"/>
+              <img src={profile4} alt="profile-pic" />
             </span>
             <span>
-              <img src={profile3} alt="profile-pic"/>
+              <img src={profile3} alt="profile-pic" />
             </span>
             <span>
-              <img src={profile5} alt="profile-pic"/>
+              <img src={profile5} alt="profile-pic" />
             </span>
             <p>
               Liked by <b>Ernest Bras</b> and <b>2,323 others</b>
@@ -105,7 +105,7 @@ export const MiddleGrid = () => {
           <div className="head">
             <div className="user">
               <div className="profile-photo">
-                <img src={profile6} alt="profile-pic"/>
+                <img src={profile6} alt="profile-pic" />
               </div>
               <div className="ingo">
                 <h3>Ria Singh</h3>
@@ -123,7 +123,7 @@ export const MiddleGrid = () => {
           <div className="action-button">
             <div className="interaction-buttons">
               <span>
-                <i className="uil uil-heart"></i>
+                <i className="fa-solid fa-heart"></i>{" "}
               </span>
               <span>
                 <i className="uil uil-comment-dots"></i>
@@ -141,13 +141,13 @@ export const MiddleGrid = () => {
 
           <div className="liked-by">
             <span>
-              <img src={profile6} alt="profile-pic"/>
+              <img src={profile6} alt="profile-pic" />
             </span>
             <span>
-              <img src={profile7} alt="profile-pic"/>
+              <img src={profile7} alt="profile-pic" />
             </span>
             <span>
-              <img src={profile8} alt="profile-pic"/>
+              <img src={profile8} alt="profile-pic" />
             </span>
             <p>
               Liked by <b>Rohan Dubey</b> and <b>2,323 others</b>
@@ -168,7 +168,7 @@ export const MiddleGrid = () => {
           <div className="head">
             <div className="user">
               <div className="profile-photo">
-                <img src={profile12} alt="profile-pic"/>
+                <img src={profile12} alt="profile-pic" />
               </div>
               <div className="ingo">
                 <h3>Cindrella Rose</h3>
@@ -180,13 +180,13 @@ export const MiddleGrid = () => {
             </span>
           </div>
           <div className="photo">
-            <img src={feed5} alt="profile-pic"/>
+            <img src={feed5} alt="profile-pic" />
           </div>
 
           <div className="action-button">
             <div className="interaction-buttons">
               <span>
-                <i className="uil uil-heart"></i>
+                <i className="fa-solid fa-heart"></i>{" "}
               </span>
               <span>
                 <i className="uil uil-comment-dots"></i>
@@ -204,13 +204,13 @@ export const MiddleGrid = () => {
 
           <div className="liked-by">
             <span>
-              <img src={profile10} alt="profile-pic"/>
+              <img src={profile10} alt="profile-pic" />
             </span>
             <span>
-              <img src={profile11} alt="profile-pic"/>
+              <img src={profile11} alt="profile-pic" />
             </span>
             <span>
-              <img src={profile13} alt="profile-pic"/>
+              <img src={profile13} alt="profile-pic" />
             </span>
             <p>
               Liked by <b>Kiara Singhania</b> and <b>233 others</b>
@@ -231,7 +231,7 @@ export const MiddleGrid = () => {
           <div className="head">
             <div className="user">
               <div className="profile-photo">
-                <img src={profile10} alt="profile-pic"/>
+                <img src={profile10} alt="profile-pic" />
               </div>
               <div className="ingo">
                 <h3>Rosy Kiara</h3>
@@ -249,7 +249,7 @@ export const MiddleGrid = () => {
           <div className="action-button">
             <div className="interaction-buttons">
               <span>
-                <i className="uil uil-heart"></i>
+                <i className="fa-solid fa-heart"></i>{" "}
               </span>
               <span>
                 <i className="uil uil-comment-dots"></i>
@@ -267,13 +267,13 @@ export const MiddleGrid = () => {
 
           <div className="liked-by">
             <span>
-              <img src={profile9} alt="profile-pic"/>
+              <img src={profile9} alt="profile-pic" />
             </span>
             <span>
-              <img src={profile14} alt="profile-pic"/>
+              <img src={profile14} alt="profile-pic" />
             </span>
             <span>
-              <img src={profile15} alt="profile-pic"/>
+              <img src={profile15} alt="profile-pic" />
             </span>
             <p>
               Liked by <b>Ernest Archieve</b> and <b>2,323 others</b>

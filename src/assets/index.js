@@ -18,3 +18,4 @@ export { default as profile11} from "./images/profile-11.jpg";
 export { default as profile12 } from "./images/profile-12.jpg";
 export { default as profile14 } from "./images/profile-14.jpg";
 export { default as profile15} from "./images/profile-15.jpg";
+export { default as logo } from "./images/logo.png";

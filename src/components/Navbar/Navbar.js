@@ -1,25 +1,34 @@
 import React from "react";
-import { profile4 } from "../../assets";
+import { profile4, logo } from "../../assets";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 export const Navbar = () => {
   return (
     <nav>
       <div className="container">
-        <h2 className="log">TALK IT OUT</h2>
+        <div className="flex-hub">
+          <Link to="/">
+            <img src={logo} alt="logo" className="header-logo" />
+          </Link>
+          <Link to="/" className="header-name">
+            <h2 className="log">Talk It Out</h2>
+          </Link>
+        </div>
+
         <div className="search-bar">
-          <i className="uil uil-search"></i>
+          <i className="fa-solid fa-magnifying-glass"></i>
           <input
             type="search"
             placeholder="Search for inspirations and projects"
           />
         </div>
         <div className="create">
-          <label for="create-post" className="btn btn-primary">
+          <label htmlFor="create-post" className="btn btn-primary">
             Create
           </label>
           <div className="profile-photo">
-            <img src={profile4} alt="profile-pic"/>
+            <img src={profile4} alt="profile-pic" />
           </div>
         </div>
       </div>

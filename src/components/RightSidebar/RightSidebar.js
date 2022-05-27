@@ -21,7 +21,7 @@ export const RightSidebar = () => {
         </div>
 
         <div className="search-bar">
-          <i className="uil uil-search"></i>
+          <i className="fa-solid fa-magnifying-glass"></i>
           <input
             type="search"
             placeholder="Enter username"
@@ -31,29 +31,29 @@ export const RightSidebar = () => {
 
         <div className="follow-request">
           <div className="profile-photo">
-            <img src={profile10} alt="profile-pic"/>
+            <img src={profile10} alt="profile-pic" />
           </div>
           <div className="message-body">
             <h5>Ede Quitt</h5>
             <p className="text-muted">@edeQuitt45</p>
           </div>
-          <button className="btn btn-follow">Follow</button>
+          {/* <button className="btn btn-follow">Follow</button> */}
         </div>
 
         <div className="follow-request">
           <div className="profile-photo">
-            <img src={profile11} alt="profile-pic"/>
+            <img src={profile11} alt="profile-pic" />
           </div>
           <div className="message-body">
             <h5>Rohan Dubey</h5>
             <p className="text-muted">@dubeyRoh</p>
           </div>
-          <button className="btn btn-follow">Follow</button>
+          {/* <button className="btn btn-follow">Follow</button> */}
         </div>
 
         <div className="follow-request">
           <div className="profile-photo">
-            <img src={profile3} alt="profile-pic"/>
+            <img src={profile3} alt="profile-pic" />
           </div>
           <div className="message-body">
             <h5>Nidhi Vasa</h5>
@@ -64,7 +64,7 @@ export const RightSidebar = () => {
 
         <div className="follow-request">
           <div className="profile-photo">
-            <img src={profile1} alt="profile-pic"/>
+            <img src={profile1} alt="profile-pic" />
           </div>
           <div className="message-body">
             <h5>Aryanii T</h5>
@@ -75,7 +75,7 @@ export const RightSidebar = () => {
 
         <div className="follow-request">
           <div className="profile-photo">
-            <img src={profile5} alt="profile-pic"/>
+            <img src={profile5} alt="profile-pic" />
           </div>
           <div className="message-body">
             <h5>Ishita Verma</h5>
@@ -86,7 +86,7 @@ export const RightSidebar = () => {
 
         <div className="follow-request">
           <div className="profile-photo">
-            <img src={profile6} alt="profile-pic"/>
+            <img src={profile6} alt="profile-pic" />
           </div>
           <div className="message-body">
             <h5>Ria Singh</h5>
@@ -97,7 +97,7 @@ export const RightSidebar = () => {
 
         <div className="follow-request">
           <div className="profile-photo">
-            <img src={profile9} alt="profile-pic"/>
+            <img src={profile9} alt="profile-pic" />
           </div>
           <div className="message-body">
             <h5>Keshav Tarak</h5>
@@ -108,7 +108,7 @@ export const RightSidebar = () => {
 
         <div className="follow-request">
           <div className="profile-photo">
-            <img src={profile7} alt="profile-pic"/>
+            <img src={profile7} alt="profile-pic" />
           </div>
           <div className="message-body">
             <h5>Manoj S</h5>
@@ -123,7 +123,7 @@ export const RightSidebar = () => {
         <div className="request">
           <div className="info">
             <div className="profile-photo">
-              <img src={profile6} alt="profile-pic"/>
+              <img src={profile6} alt="profile-pic" />
             </div>
 
             <div>
@@ -139,7 +139,7 @@ export const RightSidebar = () => {
 
           <div className="info">
             <div className="profile-photo">
-              <img src={profile8} alt="profile-pic"/>
+              <img src={profile8} alt="profile-pic" />
             </div>
 
             <div>

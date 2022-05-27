@@ -13,6 +13,29 @@ nav .container {
   justify-content: space-between;
 }
 
+.flex-hub {
+  display: flex;
+  place-items: center;
+  gap: 0.5rem;
+}
+
+.header-logo {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  display: block;
+  cursor: pointer;
+}
+
+.header-name{
+  cursor: pointer;
+  background: -webkit-linear-gradient(var(--logo-color), black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  font-size: 1.23rem;
+}
+
 .search-bar {
   background-color: var(--color-light);
   border-radius: var(--border-radius);
