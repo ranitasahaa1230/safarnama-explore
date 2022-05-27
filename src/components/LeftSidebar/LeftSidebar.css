@@ -1,0 +1,70 @@
+.left .sidebar {
+  margin-top: 1rem;
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+}
+
+.left .profile .profile-text,
+.left .profile .profile-text:hover {
+  background: -webkit-linear-gradient(var(--color-scroll), black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.left .sidebar .menu-item {
+  display: flex;
+  place-items: center;
+  height: 4rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+  position: relative;
+  margin: 1rem 0;
+  color: var(--color-radius);
+}
+
+.left .sidebar .menu-item:hover {
+  background: var(--color-gray2);
+}
+
+.left .sidebar i,
+.left .sidebar i:hover {
+  font-size: 1.4rem;
+  color: var(--color-radius);
+  margin-left: 2rem;
+  position: relative;
+}
+
+.left .sidebar h3,
+.left .sidebar h3:hover {
+  margin-left: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.left .sidebar a.active i,
+.left .sidebar a.active h3 {
+  color: var(--color-shadow);
+}
+
+.left .sidebar a.active::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 100%;
+  position: absolute;
+  background: var(--color-tertiary);
+}
+
+.left .sidebar a.active {
+  border-top-left-radius: var(--card-border-radius);
+  overflow: hidden;
+  background: var(--color-gray2);
+}
+
+.left .btn {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}

@@ -1,17 +1,18 @@
 import { Route, Routes } from "react-router-dom";
 import './App.css';
-// import { Navbar } from "./components";
-// import { Home } from "./pages";
+import { Navbar } from "./components";
+import { Bookmark, Explore, Home, Profile } from "./pages";
 
 function App() {
   return (
     <div className="App">
-    <h1>llll</h1>
-    {/* <Navbar/>
+    <Navbar/>
       <Routes>
         <Route path="/" element={<Home />}/>
-        
-      </Routes> */}
+        <Route path="/explore" element={<Explore />}/>
+        <Route path="/bookmark" element={<Bookmark />}/>
+        <Route path="/profile" element={<Profile />}/>       
+      </Routes>
     </div>
   );
 }
