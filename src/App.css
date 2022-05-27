@@ -5,6 +5,7 @@
   --dark-color-lightness: 17%;
   --light-color-lightness: 95%;
   --white-color-lightness: 100%;
+
   --color-white: hsl(
     var(--primary-color-hue),
     30%,
@@ -29,6 +30,7 @@
   --color-shadow: #9536ee;
   --color-radius: #003049;
   --color-scroll: #7209b7;
+  --bg-code:#fafafa;
 
   --border-radius: 2rem;
   --card-border-radius: 1rem;
@@ -99,7 +101,7 @@ img {
 
 .btn-primary {
   background: var(--color-primary);
-  color: white;
+  color:var(--bg-code);
 }
 
 .text-bold {

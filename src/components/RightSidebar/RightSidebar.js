@@ -133,8 +133,8 @@ export const RightSidebar = () => {
           </div>
 
           <div className="action">
-            <button className="btn btn-primary">Accept</button>
-            <button className="btn">Decline</button>
+            <button className="btn accept">Accept</button>
+            <button className="btn decline">Decline</button>
           </div>
 
           <div className="info">
@@ -149,8 +149,8 @@ export const RightSidebar = () => {
           </div>
 
           <div className="action">
-            <button className="btn btn-primary">Accept</button>
-            <button className="btn">Decline</button>
+            <button className="btn accept">Accept</button>
+            <button className="btn decline">Decline</button>
           </div>
         </div>
       </div>

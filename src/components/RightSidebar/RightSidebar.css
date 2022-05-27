@@ -63,7 +63,7 @@ main .container .right {
 
 .btn-follow {
   background: var(--color-tertiary);
-  color:white;
+  color:var(--bg-code);
 }
 
 .right .friend-requests {
@@ -88,4 +88,14 @@ main .container .right {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
+}
+
+.accept{
+  background: var(--color-success);
+  color:var(--bg-code);
+}
+
+.decline{
+  background: var(--color-danger);
+  color:var(--bg-code);
 }
