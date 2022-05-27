@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import './App.css';
 import { Navbar } from "./components";
 import { Bookmark, Explore, Home, Profile, Login, SignUp} from "./pages";
+import Mockman from "mockman-js";
 
 function App() {
   return (
