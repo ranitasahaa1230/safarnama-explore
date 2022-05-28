@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Roboto:wght@500&family=Tiro+Kannada:ital@1&display=swap');
+
 nav {
   width: 100%;
   background: var(--color-white);
@@ -29,6 +31,7 @@ nav .container {
 
 .header-name{
   cursor: pointer;
+  font-family: 'Tiro Kannada', serif;
   background: -webkit-linear-gradient(var(--logo-color), black);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

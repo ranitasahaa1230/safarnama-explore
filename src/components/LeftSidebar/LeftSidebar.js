@@ -18,7 +18,7 @@ export const LeftSidebar = () => {
       </Link>
 
       <div className="sidebar">
-        <NavLink to="/home" className="menu-item">
+        <NavLink to="/feed" className="menu-item">
           <span>
             <i className="fa-solid fa-house"></i>
           </span>
