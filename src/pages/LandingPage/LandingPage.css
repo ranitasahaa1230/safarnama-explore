@@ -1,0 +1,138 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 65rem;
+  margin: auto;
+  min-height: 90vh;
+  padding: 1rem;
+}
+
+.flex-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: auto;
+  width: 100%;
+}
+
+.hero-text-content {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 1.25rem;
+  text-align: center;
+  align-self: center;
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+
+.flex-img {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  place-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  height: 3.8rem;
+  width: 3rem;
+}
+
+.hero-image-text {
+  font-weight: 800;
+  font-family: "Tiro Kannada", serif;
+  font-size: 2.45rem;
+  line-height: 2.25rem;
+  background: -webkit-linear-gradient(var(--logo-color), black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.hero-text {
+  font-size: 1.8rem;
+  line-height: 1.95rem;
+  color: var(--borders-color);
+  font-weight: normal;
+}
+
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 0.75rem;
+}
+
+.signup-btn {
+  min-width: 120px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  background: var(--color-primary);
+  color: var(--bg-code);
+  display: inline-block;
+  padding: var(--button-padding);
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-size: 1rem;
+}
+
+.btn-primary-link{
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--color-radius);
+  font-weight: normal;
+}
+
+.underline {
+  color: var(--borders-color);
+  border-bottom: 2px solid var(--borders-color);
+  font-weight: 600;
+}
+
+.underline:hover{
+  color: var(--logo-color);
+}
+
+.hero-logo-image {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+.hero-logo {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 2rem;
+  }
+  .flex-hero {
+    flex-direction: column;
+  }
+  .flex-img {
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
+  .hero-image {
+    height: 3rem;
+  }
+  .hero-image-text {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .hero-text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .signup-btn {
+    margin-bottom: 0;
+    margin-top: 0.1rem;
+  }
+}
