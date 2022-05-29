@@ -179,6 +179,7 @@
   @media (max-width: 630px) {
     .form-box {
       max-width: 22rem;
+      top: 1rem;
     }
     .submit-loginbtn,
     .submit-loginbtns {
@@ -193,8 +194,11 @@
   
   @media (max-width: 525px) {
     .form-box {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       margin-bottom: 2rem;
+    }
+    .forget-psswd{
+        margin-left: 1.2rem;
     }
     .submit-loginbtn,
     .submit-loginbtns {

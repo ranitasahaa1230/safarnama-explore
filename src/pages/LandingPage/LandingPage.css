@@ -93,7 +93,7 @@
 .underline {
   color: var(--borders-color);
   border-bottom: 2px solid var(--borders-color);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .underline:hover{
