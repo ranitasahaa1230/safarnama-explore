@@ -37,7 +37,7 @@ export const RightSidebar = () => {
             <h5>Ede Quitt</h5>
             <p className="text-muted">@edeQuitt45</p>
           </div>
-          {/* <button className="btn btn-follow">Follow</button> */}
+          <button className="btn btn-follow">Follow</button>
         </div>
 
         <div className="follow-request">
@@ -48,7 +48,7 @@ export const RightSidebar = () => {
             <h5>Rohan Dubey</h5>
             <p className="text-muted">@dubeyRoh</p>
           </div>
-          {/* <button className="btn btn-follow">Follow</button> */}
+          <button className="btn btn-follow">Follow</button>
         </div>
 
         <div className="follow-request">
