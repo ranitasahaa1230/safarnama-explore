@@ -10,19 +10,20 @@ export const posts = [
   {
     _id: uuid(),
     content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+      "I trust that everything happens for a reason, even if we are not wise enough to see it.",
     likes: {
-      likeCount: 0,
+      likeCount: 1,
       likedBy: [],
       dislikedBy: [],
     },
-    username: "adarshbalika",
-    createdAt: formatDate(),
+    username: "rohan123@gmail.com",
+    bookmark: [],
+    createdAt: "2021-05-23T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
-        username: "shubhamsoni",
+        username: "edequitt@gmail.com",
         text: "Interesting",
         votes: {
           upvotedBy: [],
@@ -31,8 +32,17 @@ export const posts = [
       },
       {
         _id: uuid(),
-        username: "sohamshah",
-        text: "Wow!",
+        username: "ranitasaha@gmail.com",
+        text: "Indeed. Loved this quote!",
+        votes: {
+          upvotedBy: [],
+          downvotedBy: [],
+        },
+      },
+      {
+        _id: uuid(),
+        username: "aisha@gmail.com",
+        text: "Nice quote",
         votes: {
           upvotedBy: [],
           downvotedBy: [],
@@ -42,20 +52,19 @@ export const posts = [
   },
   {
     _id: uuid(),
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    content: "Good Morning, Fam, Travelling to Singapore today. Would share all the experiences in my stories.",
     likes: {
       likeCount: 0,
       likedBy: [],
       dislikedBy: [],
     },
-    username: "shubhamsoni",
-
+    username: "neha@gmail.com",
+    bookmark: [],
     comments: [
       {
         _id: uuid(),
-        username: "shubhamsoni",
-        text: "Interesting",
+        username: "aisha@gmail.com",
+        text: "Can't wait!",
         votes: {
           upvotedBy: [],
           downvotedBy: [],
@@ -63,15 +72,190 @@ export const posts = [
       },
       {
         _id: uuid(),
-        username: "sohamshah",
-        text: "Wow!",
+        username: "shreyas@gmail.com",
+        text: "Yassss. Let's do this bro",
         votes: {
           upvotedBy: [],
           downvotedBy: [],
         },
       },
     ],
-    createdAt: formatDate(),
+    createdAt: "2022-01-25T15:48:12+05:30",
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    content: "Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma – which is living with the results of other people’s thinking.” – Steve Jobs",
+    likes: {
+      likeCount: 0,
+      likedBy: [],
+      dislikedBy: [],
+    },
+    username: "rohan@gmail.com",
+    bookmark: [],
+    comments: [
+      {
+        _id: uuid(),
+        username: "ranitasaha@gmail.com",
+        text: "Made my morning. Nice quote!",
+        votes: {
+          upvotedBy: [],
+          downvotedBy: [],
+        },
+      },
+      {
+        _id: uuid(),
+        username: "omkar@gmail.com",
+        text: "Wow",
+        votes: {
+          upvotedBy: [],
+          downvotedBy: [],
+        },
+      },
+    ],
+    createdAt: "2022-01-25T16:20:12+05:30",
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    content: "The big lesson in life, baby, is never be scared of anyone or anything.",
+    likes: {
+      likeCount: 0,
+      likedBy: [],
+      dislikedBy: [],
+    },
+    username: "riasingh@gmail.com",
+    bookmark: [],
+    comments: [],
+    createdAt: "2022-02-25T08:20:12+05:30",
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    content: "There is only one happiness in this life, to love and be loved.",
+    likes: {
+      likeCount: 0,
+      likedBy: [],
+      dislikedBy: [],
+    },
+    username: "nidhi@gmail.com",
+    comments: [],
+    bookmark: [],
+    createdAt: "2022-04-23T10:38:12+05:30",
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    content:
+      "Don’t settle for what life gives you; make life better and build something.",
+    likes: {
+      likeCount: 2,
+      likedBy: [],
+      dislikedBy: [],
+    },
+    username: "ranitasaha@gmail.com",
+    bookmark: [],
+
+    comments: [
+      {
+        _id: uuid(),
+        username: "shreyas@gmail.com",
+        text: "Thats amazing quote",
+        votes: {
+          upvotedBy: [],
+          downvotedBy: [],
+        },
+      },
+    ],
+    createdAt: "2020-04-23T15:20:12+05:30",
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    content: "Your boy got that job! Wohoooo!!",
+    likes: {
+      likeCount: 0,
+      likedBy: [],
+      dislikedBy: [],
+    },
+    username: "shrey123@gmail.com",
+    comments: [],
+    bookmark: [],
+    createdAt: "2022-04-01T10:38:12+05:30",
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    content:
+      "Happy Sunday, Fam! Good vibes only",
+    likes: {
+      likeCount: 0,
+      likedBy: [],
+      dislikedBy: [],
+    },
+    username: "omkar@gmail.com",
+    comments: [],
+    bookmark: [],
+    createdAt: "2021-04-30T10:08:12+05:30",
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    content:
+      "Sunday spent well!",
+    likes: {
+      likeCount: 0,
+      likedBy: [],
+      dislikedBy: [],
+    },
+    username: "ishita@gmail.com",
+    comments: [],
+
+    bookmark: [],
+    createdAt: "2022-03-14T20:08:12+05:30",
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    content:
+      "6 months of hardwork can change your life completely!",
+    likes: {
+      likeCount: 0,
+      likedBy: [],
+      dislikedBy: [],
+    },
+    username: "gaurav@gmail.com",
+    comments: [
+      {
+        _id: uuid(),
+        username: "ranitasaha@gmail.com",
+        text: "Couldn't agree more!",
+        votes: {
+          upvotedBy: [],
+          downvotedBy: [],
+        },
+      },
+      {
+        _id: uuid(),
+        username: "nidhivasa@gmail.com",
+        text: "Yess, Indeed",
+        votes: {
+          upvotedBy: [],
+          downvotedBy: [],
+        },
+      },
+      {
+        _id: uuid(),
+        username: "rohan@gmail.com",
+        text: "Please tell about your journey more!",
+        votes: {
+          upvotedBy: [],
+          downvotedBy: [],
+        },
+      },
+    ],
+    bookmark: [],
+    createdAt: "2022-05-13T07:55:12+05:30",
     updatedAt: formatDate(),
   },
 ];

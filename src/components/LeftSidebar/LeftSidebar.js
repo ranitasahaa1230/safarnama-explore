@@ -1,9 +1,16 @@
 import React from "react";
 import { profile4 } from "../../assets";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, useNavigate, Link } from "react-router-dom";
 import "./LeftSidebar.css";
+import { logoutUser } from "../../features/Auth/authSlice";
+import { useDispatch,useSelector } from "react-redux";
+import { useToast } from "../../hooks";
 
 export const LeftSidebar = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { showToast } = useToast();
+  const { user } = useSelector((state) => state.auth);
   return (
     <div className="left">
 
@@ -12,8 +19,8 @@ export const LeftSidebar = () => {
           <img src={profile4} alt="profile-pic" />
         </div>
         <div className="handle">
-          <h4 className="profile-text">Ranita Saha</h4>
-          <p className="text-muted">@Ifullofsunshine</p>
+          <h4 className="profile-text">{user.firstName}{user.lastName}</h4>
+          <p className="text-muted">@{user.username}</p>
         </div>
       </Link>
 
@@ -49,6 +56,17 @@ export const LeftSidebar = () => {
           </span>
           <h3>Profile</h3>
         </NavLink>
+
+        <li className="menu-item" onClick={() => {
+              dispatch(logoutUser());
+              navigate("/");
+              showToast("Logged Out !","success");
+            }}>
+          <span>
+          <i className="fa-solid fa-right-from-bracket"></i>          </span>
+          <h3>Logout</h3>
+        </li>
+
       </div>
 
       <label htmlFor="create-post" className="btn btn-primary">
