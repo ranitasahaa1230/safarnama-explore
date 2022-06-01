@@ -1,0 +1,208 @@
+.app__container{
+    display: flex;
+    place-items: center;
+    padding: 1.5rem 1rem;
+}
+
+#box-btn .box-btn{
+    top:6rem;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 30rem;
+    position: relative;
+    padding: 10px 0;
+    top:3.5rem;
+    margin: auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 0 var(--logo-color);
+    /* color: var(--bg-code); */
+  }
+
+  .button-box {
+    margin: 0.5rem;
+    text-align: center;
+    position: relative;
+  }
+  .toggle-btn {
+    padding: 3px 0;
+    color: var(--borders-color);
+    font-size: 1.68rem;
+    font-weight: 500;
+  }
+  
+  .input-group {
+    transition: 0.5s;
+    margin: 0 2rem;
+  }
+  
+  .input-fields {
+    display: block;
+    width: 90%;
+    margin: 2px 0.5rem;
+    border: 1px solid var(--accent-color);
+    background: transparent;
+    border-radius: 0.2rem;
+    /* color: var(--bg-code); */
+    padding: 0.45rem 0.4rem;
+    font-size: 0.95rem;
+  }
+  .input-fields:hover,
+  .visibility:hover {
+    border: 2px solid var(--color-tertiary);
+  }
+  .visibility-fields:focus {
+    outline: none;
+  }
+  .password-label {
+    width: 100%;
+    display: block;
+    font-size: 1.08rem;
+    padding: 0.4rem;
+  }
+  
+  .password-label::after {
+    content: "*";
+    color: var(--color-danger);
+  }
+  
+  .submit-loginbtns {
+    width: 22rem;
+    display: block;
+    cursor: pointer;
+    padding: 9.8px 2rem;
+    margin: 0.8rem 1rem;
+    background: var(--borders-color);
+    border: 0;
+    outline: none;
+    color: var(--bg-code);
+    border-radius: 0.8rem;
+    font-size: 1.05rem;
+  }
+  .submit-loginbtn {
+    width: 22rem;
+    display: block;
+    cursor: pointer;
+    padding: 8px 3rem;
+    margin: 0.8rem 1rem;
+    border: 2px solid var(--borders-color);
+    outline: none;
+    color: var(--borders-color);
+    border-radius: 0.8rem;
+    font-size: 1.1rem;
+    background: none;
+  }
+  
+  .submit-loginbtns:hover,
+  .submit-loginbtn:hover {
+    opacity: 0.9;
+  }
+  .submit-loginbtn:hover {
+    background: var(--borders-color);
+    color: var(--bg-code);
+    border: 0;
+  }
+  input.check-box {
+    margin: 0.6rem 0.5rem;
+    width: 1.05rem;
+    height: 1.05rem;
+    cursor: pointer;
+  }
+  span.check-psswd {
+    /* color: var(--bg-code); */
+    font-size: 1.125rem;
+  }
+  .checkbox-block {
+    display: flex;
+    align-items: center;
+  }
+  .input-account {
+    padding: 0.45rem;
+    font-size: 1.1rem;
+    /* color: var(--bg-code); */
+    margin: 0.35rem 0.5rem;
+  }
+  .primary-account {
+    /* color: var(--bg-code); */
+    text-decoration: none;
+    border-bottom: 2px solid var(--borders-color);
+    margin-left: 0.5rem;
+  }
+  a.primary-account:hover{
+      color: var(--logo-color);
+  }
+  
+  .forget-psswd {
+    color: var(--borders-color);
+    font-size: 1.1rem;
+    margin-left: 3.8rem;
+  }
+  .visibility {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--accent-color);
+    width: 90%;
+    margin: 5px 0.5rem;
+  }
+  .visibility-icon {
+    cursor: pointer;
+    padding-right: 2rem;
+    color: var(--borders-color);
+    font-size: 1.2rem;
+  }
+  .visibility-fields {
+    display: block;
+    width: 100%;
+    border: none;
+    background: transparent;
+    /* color: var(--bg-code); */
+    padding: 0.45rem 0.4rem;
+    font-size: 0.95rem;
+  }
+  
+  .login-error-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--trash-color);
+  }
+
+  .login-error-msg i{
+    font-size: 1.1rem;
+    margin: 0.2rem 0;
+  }
+  .login-error-msg p{
+    font-size: 1.1rem;
+    margin: 0.5rem 0.4rem;
+  }
+  
+  @media (max-width: 630px) {
+    .form-box {
+      max-width: 22rem;
+      top: 1rem;
+    }
+    .submit-loginbtn,
+    .submit-loginbtns {
+      width: 16rem;
+    }
+    .checkbox-block {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+    }
+  }
+  
+  @media (max-width: 525px) {
+    .form-box {
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .forget-psswd{
+        margin-left: 1.2rem;
+    }
+    .submit-loginbtn,
+    .submit-loginbtns {
+      width: 14rem;
+    }
+  }
