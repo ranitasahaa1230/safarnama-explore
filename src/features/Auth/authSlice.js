@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { loginService, signUpService } from "../../services";
-import { toast } from "react-toastify";
 
 const initialState = {
   token: localStorage.getItem("token") || null,

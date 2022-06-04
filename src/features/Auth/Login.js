@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "./authSlice";
 import { useDocumentTitle, useToast } from "../../hooks";
 import "./Auth.css";
@@ -18,6 +18,7 @@ export function Login() {
   const navigate = useNavigate();
   const { showToast } = useToast();
   useDocumentTitle("Login");
+  let from = location.state?.from?.pathname ?? "/feed";
 
   const handleFormHandler = async (event) => {
     event.preventDefault();
@@ -28,7 +29,7 @@ export function Login() {
       }
       if (token) {
         showToast("Logged In Successfully!", "success");
-        navigate(location.state?.from?.pathname ?? "/feed", { replace: true });
+        navigate(from, { replace: true });
       }
     } catch (error) {
       showToast("Can't login. Recheck details and try again!", "error");
@@ -122,7 +123,7 @@ export function Login() {
                 <i className="fa-solid fa-square-xmark"></i>
                 <p>{error}</p>
               </div>
-            )} 
+            )}
 
             <div className="input-account">
               Not a user yet?
@@ -132,7 +133,6 @@ export function Login() {
             </div>
           </div>
         </form>
-
       </div>
     </div>
   );
