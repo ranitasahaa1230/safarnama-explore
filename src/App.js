@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Navbar, Toast } from "./components";
+import { Navbar, NotFound, Toast } from "./components";
 import {
   Bookmark,
   Explore,
@@ -26,8 +26,9 @@ function App() {
         <Route path="/explore" element={<Explore />} />
         <Route path="/bookmark" element={<Bookmark />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-    </div>
+      </div>
   );
 }
 
