@@ -40,6 +40,7 @@ export function SignUp() {
         "Can't SignUp the user. Recheck details and try again!",
         "error"
       );
+      setError("Passwords do not match");
     }
   };
 
