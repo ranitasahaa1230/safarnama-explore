@@ -1,56 +1,47 @@
 import React, { useState } from "react";
-import { Link} from "react-router-dom";
-// import { useDocumentTitle, useToast } from "../../hooks";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useDocumentTitle, useToast } from "../../hooks";
+import { signUpUser } from "./authSlice";
+import { useDispatch, useSelector } from "react-redux";
 import "./Auth.css";
 
 export function SignUp() {
-  // useDocumentTitle("SignUp");
+  const { token } = useSelector((state) => state.auth);
+  const [signUpForm, setsignUpForm] = useState({
+    firstName: "",
+    lastName: "",
+    username: "",
+    password: "",
+    confirmPassword: "",
+  });
 
-  // const { dispatch: authDispatch } = useAuth();
-
-  // const [state, dispatch] = useReducer(signupReducer, {
-  //   firstName: "",
-  //   lastName: "",
-  //   email: "",
-  //   password: "",
-  //   confirmPassword: "",
-  // });
-  // const { firstName, lastName, email, password, confirmPassword } = state;
-
-  // const location = useLocation();
-  // const navigate = useNavigate();
-  // const { showToast } = useToast();
-
+  const location = useLocation();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { showToast } = useToast();
+  useDocumentTitle("SignUp");
   const [showPassword, setShowPassword] = useState(false);
-  // const [error, setError] = useState("");
+  const [error, setError] = useState("");
+  let from = location.state?.from?.pathname ?? "/login";
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    // try {
-    //   const response = await axios.post("/api/auth/signup", {
-    //     firstName,
-    //     lastName,
-    //     email,
-    //     password,
-    //   });
-
-    //   const { createdUser: user, encodedToken } = response.data;
-    //   authDispatch({ type: "AUTH_SUCCESS", payload: { user, encodedToken } });
-    //   localStorage.setItem("user", JSON.stringify(user));
-    //   localStorage.setItem("token", encodedToken);
-    //   if (location.state !== null) {
-    //     navigate(location.state?.from?.pathname);
-    //   } else {
-    //     navigate("/");
-    //   }
-    //   showToast("Account Created and Logged In!", "success");
-    // } catch (error) {
-    //   showToast(error.response.data.errors[0], "error");
-    // }
-  };
-
-  const registerHandler = () => {
-    // if (password !== confirmPassword) setError("Passwords do not match");
+    try {
+      const response = await dispatch(signUpUser(signUpForm));
+      if (response?.error) {
+        throw new Error(error);
+      }
+      if (token) {
+        showToast("Account Created Successfully !", "success");
+        navigate(from, { replace: true });
+      }
+    } catch (error) {
+      showToast(
+        "Can't SignUp the user. Recheck details and try again!",
+        "error"
+      );
+      setError("Passwords do not match");
+    }
   };
 
   return (
@@ -67,10 +58,10 @@ export function SignUp() {
             type="text"
             className="input-fields"
             placeholder="First Name"
-            // value={firstName}
-            // onChange={(e) =>
-            //   dispatch({ type: "FIRST_NAME", payload: e.target.value })
-            // }
+            value={signUpForm.firstName}
+            onChange={(e) =>
+              setsignUpForm((form) => ({ ...form, firstName: e.target.value }))
+            }
             required
           />
           <label htmlFor="lastname" className="password-label">
@@ -80,23 +71,23 @@ export function SignUp() {
             type="text"
             className="input-fields"
             placeholder="Last Name"
-            // value={lastName}
-            // onChange={(e) =>
-            //   dispatch({ type: "LAST_NAME", payload: e.target.value })
-            // }
+            value={signUpForm.lastName}
+            onChange={(e) =>
+              setsignUpForm((form) => ({ ...form, lastName: e.target.value }))
+            }
             required
           />
-          <label htmlFor="mail" className="password-label">
-            Email Address
+          <label htmlFor="username" className="password-label">
+            Username
           </label>
           <input
-            type="email"
+            type="username"
             className="input-fields"
-            placeholder="Enter Email Id"
-            // value={email}
-            // onChange={(e) =>
-            //   dispatch({ type: "EMAIL", payload: e.target.value })
-            // }
+            placeholder="Enter Your Username"
+            value={signUpForm.username}
+            onChange={(e) =>
+              setsignUpForm((form) => ({ ...form, username: e.target.value }))
+            }
             required
           />
           <label htmlFor="pwd" className="password-label">
@@ -107,10 +98,10 @@ export function SignUp() {
               type={showPassword ? "text" : "password"}
               className="visibility-fields"
               placeholder="Enter Password"
-              // value={password}
-              // onChange={(e) =>
-              //   dispatch({ type: "PASSWORD", payload: e.target.value })
-              // }
+              value={signUpForm.password}
+              onChange={(e) =>
+                setsignUpForm((form) => ({ ...form, password: e.target.value }))
+              }
               autoComplete="off"
               required
             />
@@ -136,13 +127,13 @@ export function SignUp() {
               type={showPassword ? "text" : "password"}
               className="visibility-fields"
               placeholder="Enter Confirm Password"
-              // value={confirmPassword}
-              // onChange={(e) =>
-              //   dispatch({
-              //     type: "CONFIRM_PASSWORD",
-              //     payload: e.target.value,
-              //   })
-              // }
+              value={signUpForm.confirmPassword}
+              onChange={(e) =>
+                setsignUpForm((form) => ({
+                  ...form,
+                  confirmPassword: e.target.value,
+                }))
+              }
               autoComplete="off"
               required
             />
@@ -169,17 +160,24 @@ export function SignUp() {
           <button
             type="submit"
             className="submit-loginbtns"
-            onClick={registerHandler}
+            disabled={signUpForm.password !== signUpForm.confirmPassword}
           >
             REGISTER
           </button>
 
-          {/* {error && (
+          {error && (
             <div className="login-error-msg">
               <i className="fa-solid fa-square-xmark"></i>
               <p>{error}</p>
             </div>
-          )} */}
+          )}
+
+          {signUpForm.password !== signUpForm.confirmPassword && (
+            <div className="login-error-msg">
+              <i className="fa-solid fa-square-xmark"></i>
+              <p>Passwords don't match</p>
+            </div>
+          )}
 
           <div className="input-account">
             Already registered?

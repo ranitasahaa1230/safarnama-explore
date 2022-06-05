@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Navbar } from "./components";
+import { Navbar, Toast } from "./components";
 import {
   Bookmark,
   Explore,
@@ -9,13 +9,14 @@ import {
   Login,
   SignUp,
   LandingPage,
-} from "./pages";
+} from "./features";
 import Mockman from "mockman-js";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <Toast/>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/feed" element={<Home />} />

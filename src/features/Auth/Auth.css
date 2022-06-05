@@ -167,11 +167,12 @@
     align-items: center;
     color: var(--trash-color);
   }
-  .login-error-msg i {
+
+  .login-error-msg i{
     font-size: 1.1rem;
     margin: 0.2rem 0;
   }
-  .login-error-msg p {
+  .login-error-msg p{
     font-size: 1.1rem;
     margin: 0.5rem 0.4rem;
   }

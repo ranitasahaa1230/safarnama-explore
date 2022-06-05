@@ -1,0 +1,16 @@
+.bookmarks{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+.no-bookmarks{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.18rem;
+    color: var(--color-radius);
+}
+
+.no-bookmarks button{
+    margin-top: 0.4rem;
+}
