@@ -1,9 +1,11 @@
 import React from "react";
 import { heroImage, logo } from "../../assets";
+import { useSelector} from "react-redux";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
 
 export const LandingPage = () => {
+  const { token } = useSelector((state) => state.auth);
   return (
     <>
       <section className="hero">
@@ -16,16 +18,23 @@ export const LandingPage = () => {
 
             <h1 className="hero-text">Lose your mind and find your soul!</h1>
 
-            <div className="auth-buttons">
-              <Link to="/signup" className="signup-btn">
-                Join Now
+            {token ? (
+              <Link to="/feed">
+                <button className="auth-buttons btn btn-primary">Join Now</button>
               </Link>
-
-              <Link to="/login" className="btn-primary-link">
+            ) : (
+              /* <Link to="/login" className="btn-primary-link">
                 Already have an account?{" "}
                 <span className="underline">Login</span>
+              </Link> */
+              <Link to="/login">
+                <button className="btn btn-primary">
+                  {/* <Link to="/signup" className="signup-btn"> */}
+                  Join Now
+                </button>
+                {/* </Link> */}
               </Link>
-            </div>
+            )}
           </div>
 
           <div className="hero-logo-image">

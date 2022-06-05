@@ -3,7 +3,7 @@ import { profile4 } from "../../assets";
 import { NavLink, useNavigate, Link } from "react-router-dom";
 import "./LeftSidebar.css";
 import { logoutUser } from "../../features/Auth/authSlice";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useToast } from "../../hooks";
 
 export const LeftSidebar = () => {
@@ -13,13 +13,15 @@ export const LeftSidebar = () => {
   const { user } = useSelector((state) => state.auth);
   return (
     <div className="left">
-
       <Link to="/profile" className="profile">
         <div className="profile-photo">
           <img src={profile4} alt="profile-pic" />
         </div>
         <div className="handle">
-          <h4 className="profile-text">{user.firstName}{user.lastName}</h4>
+          <h4 className="profile-text">
+            {user.firstName}
+            {user.lastName}
+          </h4>
           <p className="text-muted">@{user.username}</p>
         </div>
       </Link>
@@ -57,21 +59,24 @@ export const LeftSidebar = () => {
           <h3>Profile</h3>
         </NavLink>
 
-        <li className="menu-item" onClick={() => {
-              dispatch(logoutUser());
-              navigate("/");
-              showToast("Logged Out !","success");
-            }}>
+        <li
+          className="menu-item"
+          onClick={() => {
+            dispatch(logoutUser());
+            navigate("/");
+            showToast("Logged Out !", "success");
+          }}
+        >
           <span>
-          <i className="fa-solid fa-right-from-bracket"></i>          </span>
+            <i className="fa-solid fa-right-from-bracket"></i>{" "}
+          </span>
           <h3>Logout</h3>
         </li>
-
       </div>
 
-      <label htmlFor="create-post" className="btn btn-primary">
+      <button htmlFor="create-post" id="add-post" className="btn btn-primary">
         Create Post
-      </label>
+      </button>
     </div>
   );
 };
