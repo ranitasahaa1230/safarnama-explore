@@ -1,51 +1,71 @@
-import { useEffect, useState } from "react";
-import {
-  feed2,
-  profile13,
-  profile3,
-  profile4,
-  profile5,
-} from "../../../assets";
 import { useDispatch, useSelector } from "react-redux";
 import {
   deleteUserPost,
   likeAndDislikePost,
+  addAndRemoveBookmark,
 } from "../../../features/Home/postSlice";
 import { getDate } from "./utils";
 import { useToast } from "../../../hooks";
 
 export const PostCard = ({ post }) => {
   const dispatch = useDispatch();
-  const [editModal, setEditModal] = useState(false);
+//   const [editModal, setEditModal] = useState(false);
   const { showToast } = useToast();
-  const { user } = useSelector((state) => state.auth);
-    const { allUsers } = useSelector((state) => state.user);
+  const { user} = useSelector((state) => state.auth);
+//   const { allUsers } = useSelector((state) => state.user);
+
   const {
     _id,
-    likes: { likeCount, likedBy, dislikedBy },
+    likes: { likeCount, likedBy},
     content,
-    userId,
-    isEdited,
+    // userId,
+    // isEdited,
     username,
     firstName,
     lastName,
     updatedAt,
-    comments,
+    // comments,
     postMedia,
     profileImage,
+    bookmark,
   } = post;
 
-  const userInfo = allUsers && allUsers?.find((user) => user.username === username);
+//   const userInfo =
+//     allUsers && allUsers?.find((user) => user.username === username);
   const isLiked = likedBy?.some((like) => like.username === user.username);
-
+  const isBookmarked = bookmark?.some(
+    (bookmarkPost) => bookmarkPost.username === user.username
+  );
 
   const editHandler = () => {
     // dispatch(openPostModal(post));
   };
 
   const likeDislikeHandler = () => {
-    dispatch(likeAndDislikePost({ postId: _id, isLike: isLiked ? false : true }));
-    showToast("Liked Post", "success");
+    dispatch(
+      likeAndDislikePost({ postId: _id, isLike: isLiked ? false : true })
+    );
+    !isLiked && showToast("Liked Post", "success");
+  };
+
+  const addRemoveBookmarkHandler = () => {
+    if (!isBookmarked) {
+      dispatch(
+        addAndRemoveBookmark({
+          postId: _id,
+          isBookmark: isBookmarked ? false : true,
+        })
+      );
+      showToast("Bookmarked Post", "success");
+    } else {
+      dispatch(
+        addAndRemoveBookmark({
+          postId: _id,
+          isBookmark: isBookmarked ? false : true,
+        })
+      );
+      showToast("Removed Bookmark", "success");
+    }
   };
 
   return (
@@ -103,7 +123,11 @@ export const PostCard = ({ post }) => {
       <div className="action-button">
         <div className="interaction-buttons">
           <div className="likes-count" onClick={() => likeDislikeHandler()}>
-          {isLiked ? <i className="fas fa-heart card-icons"></i> : <i className="fas fa-heart cards-icon"></i>}
+            {isLiked ? (
+              <i className="fas fa-heart card-icons"></i>
+            ) : (
+              <i className="fas fa-heart cards-icon"></i>
+            )}
             <span className="text-muted">{likeCount}</span>
           </div>
 
@@ -126,24 +150,24 @@ export const PostCard = ({ post }) => {
               ></path>
             </svg>
             {/* <span className="text-muted">{comments}</span> */}
-
           </div>
           <div>
             <i className="uil uil-share-alt"></i>
           </div>
 
-          <div>
-            <i className="uil uil-bookmark-full"></i>
+          <div onClick={() => addRemoveBookmarkHandler()}>
+            {isBookmarked ? (
+              <i className="fa-solid fa-bookmark"></i>
+            ) : (
+              <i className="uil uil-bookmark-full"></i>
+            )}
             {/* <i className="fa-solid fa-bookmark"></i> */}
+            {/* <i className={`fa fa-${isBookmarked ? "bookmark" : "bookmark-o"} mr-1 fa-solid `} /> */}
           </div>
         </div>
       </div>
 
-      <div className="liked-by">
-        {/* <span>Liked by {likes.likedBy}</span> */}
-      </div>
-
-      {/* <div className="comments text-muted">View all 277 comments</div> */}
+      {/* <div className="comments text-muted">View all {comments}</div> */}
     </div>
   );
 };

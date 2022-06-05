@@ -1,5 +1,4 @@
 import { v4 as uuid } from "uuid";
-import { formatDate } from "../utils/authUtils";
 
 /**
  * Posts can be added here.
@@ -10,12 +9,13 @@ export const posts = [
   {
     _id: uuid(),
     content:
-    "“Traveling – it leaves you speechless, then turns you into a storyteller” – Ibn Battuta. This is definitely among the most inspiring travel quotes which I love the most.",
+      "“Traveling – it leaves you speechless, then turns you into a storyteller” – Ibn Battuta. This is definitely among the most inspiring travel quotes which I love the most.",
     likes: {
       likeCount: 0,
       likedBy: [],
       dislikedBy: [],
     },
+    bookmark: [],
     comments: [
       {
         _id: uuid(),
@@ -28,7 +28,7 @@ export const posts = [
       },
     ],
     postMedia: {
-      url:"https://res.cloudinary.com/dntskzrkt/image/upload/v1654197540/3d52d2ce362416e650b9ed833c4ed3ce_o7xmag.jpg",
+      url: "https://res.cloudinary.com/dntskzrkt/image/upload/v1654197540/3d52d2ce362416e650b9ed833c4ed3ce_o7xmag.jpg",
       original_filename: "travel-post-image",
     },
     profileImage: {
@@ -45,12 +45,13 @@ export const posts = [
   {
     _id: uuid(),
     content:
-    "Don’t settle for what life gives you; make life better and build something.",
+      "Don’t settle for what life gives you; make life better and build something.",
     likes: {
       likeCount: 2,
       likedBy: [],
       dislikedBy: [],
     },
+    bookmark: [],
     comments: [
       {
         _id: uuid(),
@@ -65,7 +66,7 @@ export const posts = [
     postMedia: null,
     profileImage: {
       url: "https://res.cloudinary.com/dntskzrkt/image/upload/v1654273074/profile-4_nsuffr.jpg",
-     original_filename: "ranitasaha",
+      original_filename: "ranitasaha",
     },
     firstName: "Ranita",
     lastName: "Saha",
@@ -83,7 +84,7 @@ export const posts = [
       likedBy: [],
       dislikedBy: [],
     },
-    username: "gaurav@gmail.com",
+    bookmark: [],
     comments: [
       {
         _id: uuid(),
@@ -113,8 +114,8 @@ export const posts = [
         },
       },
     ],
-    postMedia:{
-      url:"https://res.cloudinary.com/dntskzrkt/image/upload/v1654197289/feed-5_h8vqt1.jpg",
+    postMedia: {
+      url: "https://res.cloudinary.com/dntskzrkt/image/upload/v1654197289/feed-5_h8vqt1.jpg",
       original_filename: "travel-post-image",
     },
     profileImage: {
@@ -131,12 +132,13 @@ export const posts = [
   {
     _id: uuid(),
     content:
-    "The happiest people are the ones with the strongest connections to others, be it family, friends or the general community. One of the best ways to improve these relationships is by traveling together and experiencing new things together. You will find that it creates an opportunity to have some of the most important memories of your life, and this level of connection does wonders for relationships.",
+      "The happiest people are the ones with the strongest connections to others, be it family, friends or the general community. One of the best ways to improve these relationships is by traveling together and experiencing new things together. You will find that it creates an opportunity to have some of the most important memories of your life, and this level of connection does wonders for relationships.",
     likes: {
       likeCount: 1,
       likedBy: [],
       dislikedBy: [],
     },
+    bookmark: [],
     comments: [
       {
         _id: uuid(),
@@ -148,7 +150,7 @@ export const posts = [
         },
       },
     ],
-    postMedia:null,
+    postMedia: null,
     profileImage: {
       url: "https://res.cloudinary.com/dntskzrkt/image/upload/v1654276183/profile-6_bzwxjv.jpg",
       original_filename: "riassingh145",
@@ -163,12 +165,13 @@ export const posts = [
   {
     _id: uuid(),
     content:
-    "“Live with no excuses and travel with no regrets” ~ Oscar Wilde. ...",
+      "“Live with no excuses and travel with no regrets” ~ Oscar Wilde. ...",
     likes: {
       likeCount: 0,
       likedBy: [],
       dislikedBy: [],
     },
+    bookmark: [],
     comments: [
       {
         _id: uuid(),
@@ -181,7 +184,7 @@ export const posts = [
       },
     ],
     postMedia: {
-      url:"https://res.cloudinary.com/dntskzrkt/image/upload/v1654196588/feed-3_yegetz.jpg",
+      url: "https://res.cloudinary.com/dntskzrkt/image/upload/v1654196588/feed-3_yegetz.jpg",
       original_filename: "ranitasaha",
     },
     profileImage: {
@@ -198,12 +201,30 @@ export const posts = [
   {
     _id: uuid(),
     content:
-    "People who love to eat are always the best people.To eat is a necessity, but to eat intelligently is an art. We all eat, an it would be a sad waste of opportunity to eat badly.If you really want to make a friend, go to someone's house and eat with him...the people who give you their food give you their heart.",
+      "People who love to eat are always the best people.To eat is a necessity, but to eat intelligently is an art. We all eat, an it would be a sad waste of opportunity to eat badly.If you really want to make a friend, go to someone's house and eat with him...the people who give you their food give you their heart.",
     likes: {
       likeCount: 3,
-      likedBy: [],
+      likedBy: [
+        {
+          _id: uuid(),
+          firstName: "Ria",
+          lastName: "Singh",
+          username: "riassingh145",
+          password: "riasingh@123",
+          profileImage: null,
+        },
+        {
+          _id: uuid(),
+          firstName: "Cindrella",
+          lastName: "Rose",
+          username: "rosyy123",
+          password: "cindrella@123",
+          profileImage:null,
+        },
+      ],
       dislikedBy: [],
     },
+    bookmark: [],
     comments: [
       {
         _id: uuid(),
@@ -215,8 +236,8 @@ export const posts = [
         },
       },
     ],
-    postMedia:{
-      url:"https://res.cloudinary.com/dntskzrkt/image/upload/v1654196339/cld-sample-4.jpg",
+    postMedia: {
+      url: "https://res.cloudinary.com/dntskzrkt/image/upload/v1654196339/cld-sample-4.jpg",
       original_filename: "travel-post-image",
     },
     profileImage: {
@@ -233,12 +254,13 @@ export const posts = [
   {
     _id: uuid(),
     content:
-    "“The most beautiful in the world is, of course, the world itself.” -Wallace Stevens.",
+      "“The most beautiful in the world is, of course, the world itself.” -Wallace Stevens.",
     likes: {
       likeCount: 0,
       likedBy: [],
       dislikedBy: [],
     },
+    bookmark: [],
     comments: [
       {
         _id: uuid(),
@@ -250,8 +272,8 @@ export const posts = [
         },
       },
     ],
-    postMedia:{
-      url:"https://res.cloudinary.com/dntskzrkt/image/upload/v1654197867/woman-traveling-norway-sightseeing_lcanhe.jpg",
+    postMedia: {
+      url: "https://res.cloudinary.com/dntskzrkt/image/upload/v1654197867/woman-traveling-norway-sightseeing_lcanhe.jpg",
       original_filename: "travel-post-image",
     },
     profileImage: {
