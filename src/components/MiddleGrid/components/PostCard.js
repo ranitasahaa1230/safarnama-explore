@@ -157,12 +157,10 @@ export const PostCard = ({ post }) => {
 
           <div onClick={() => addRemoveBookmarkHandler()}>
             {isBookmarked ? (
-              <i className="fa-solid fa-bookmark"></i>
+              <i className="fa-solid fa-bookmark cards-bookmark"></i>
             ) : (
-              <i className="uil uil-bookmark-full"></i>
+              <i className="fa-solid fa-bookmark card-bookmark"></i>
             )}
-            {/* <i className="fa-solid fa-bookmark"></i> */}
-            {/* <i className={`fa fa-${isBookmarked ? "bookmark" : "bookmark-o"} mr-1 fa-solid `} /> */}
           </div>
         </div>
       </div>

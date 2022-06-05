@@ -106,14 +106,15 @@
   margin-left: 0.5rem;
 }
 
-.cards-icon, .card-icons{
+.cards-icon, .card-icons, .card-bookmark, .card-bookmark{
   color: var(--bg-code);
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--color-radius);  
   font-size: 1.45rem;
 }
 
-.card-icons {
+.card-icons, .cards-bookmark{
   color: var(--color-radius);
   -webkit-text-stroke-color: var(--color-radius);
 }
+
