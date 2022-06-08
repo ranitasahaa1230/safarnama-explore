@@ -1,17 +1,19 @@
 import axios from "axios";
 
-export const getAllUserService = () => axios.get("/api/users");
+export const fetchUserProfileService = (username) => {
+  return axios.get(`/api/users/${username}`);
+};
 
-export const updateUserService = (token, userData) => {
+export const fetchUserPostsService = (username) => {
+  return axios.get(`/api/posts/user/${username}`);
+};
+
+export const updateUserProfileService = (token, userData) => {
   return axios.post(
     "/api/users/edit",
+    { userData },
     {
-      userData,
-    },
-    {
-      headers: {
-        authorization: token,
-      },
+      headers: { authorization: token },
     }
   );
 };
@@ -21,21 +23,21 @@ export const followUserService = (token, userId) => {
     `/api/users/follow/${userId}`,
     {},
     {
-      headers: {
-        authorization: token,
-      },
+      headers: { authorization: token },
     }
   );
 };
 
-export const unFollowUserService = (token, userId) => {
+export const unfollowUserService = (token, userId) => {
   return axios.post(
     `/api/users/unfollow/${userId}`,
     {},
     {
-      headers: {
-        authorization: token,
-      },
+      headers: { authorization: token },
     }
   );
+};
+
+export const fetchAllUsersService = () => {
+  return axios.get("/api/users");
 };
