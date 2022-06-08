@@ -1,5 +1,4 @@
 import React from "react";
-import { profile4 } from "../../assets";
 import { NavLink, useNavigate, Link } from "react-router-dom";
 import "./LeftSidebar.css";
 import { logoutUser } from "../../features/Auth/authSlice";
@@ -11,16 +10,16 @@ export const LeftSidebar = () => {
   const navigate = useNavigate();
   const { showToast } = useToast();
   const { user } = useSelector((state) => state.auth);
+  
   return (
     <div className="left">
       <Link to="/profile" className="profile">
         <div className="profile-photo">
-          <img src={profile4} alt="profile-pic" />
+          <img src={user.profileImage?.url} alt="profile-pic" />
         </div>
         <div className="handle">
           <h4 className="profile-text">
-            {user.firstName}
-            {user.lastName}
+            {user.firstName} {user.lastName}
           </h4>
           <p className="text-muted">@{user.username}</p>
         </div>
@@ -52,7 +51,8 @@ export const LeftSidebar = () => {
               <span><i className="fa-solid fa-palette"></i></span>
               <h3>Theme</h3>
             </a> */}
-        <NavLink to="/profile" className="menu-item">
+
+        <NavLink to={`/profile/${user.username}`} className="menu-item">
           <span>
             <i className="fa-solid fa-user"></i>{" "}
           </span>

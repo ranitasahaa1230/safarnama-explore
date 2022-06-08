@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { addUserPost } from "../../../features/Home/postSlice";
+import { addUserPost, editUserPost } from "../../../features/Home/postSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useToast } from "../../../hooks";
-import { postLimit } from "../data";
+import { emojis, postLimit } from "../data";
 
 export const AddPost = () => {
   const [contents, setContent] = useState("");
   const dispatch = useDispatch();
   const [postMedia, setPostMedia] = useState(null);
-  // const [showEmojis, setShowEmojis] = useState(false);
-  // const [isMediaUploading, setIsMediaUploading] = useState(false);
+  const [showEmojis, setShowEmojis] = useState(false);
+  const [isMediaUploading, setIsMediaUploading] = useState(false);
   const { showToast } = useToast();
   const { user } = useSelector((state) => state.auth);
   const onContentChanged = (e) => setContent(e.target.value);
@@ -28,9 +28,12 @@ export const AddPost = () => {
     dispatch(addUserPost(postData));
     showToast("Post Added", "success");
     setContent("");
-    setPostMedia("");
     // } else {
     //   dispatch(editPost({ ...currentEditPost, ...postData }));
+    // }
+
+    // if (pathname !== "/" && !pathname.includes("profile")) {
+    //   navigate("/");
     // }
   };
 
@@ -41,8 +44,8 @@ export const AddPost = () => {
           <div className="profile-photo">
             <img
               loading="lazy"
-              src={user.profileImage?.url || ""}
-              alt={user.profileImage?.original_filename || ""}
+              src={user?.profileImage || ""}
+              alt={user.original_filename || ""}
             />
           </div>
         ) : (
@@ -62,7 +65,7 @@ export const AddPost = () => {
           className="btn btn-primary"
           disabled={
             !postMedia &&
-            (
+            (isMediaUploading ||
               contents.trim().length === 0 ||
               contents.trim().length > postLimit)
           }
