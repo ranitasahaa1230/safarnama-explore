@@ -10,6 +10,7 @@ main .container .right {
   border-radius: var(--card-border-radius);
   padding: var(--card-padding);
 }
+
 .right .follow .heading {
   display: flex;
   align-items: center;
@@ -17,6 +18,11 @@ main .container .right {
   margin-bottom: 1rem;
 }
 
+.right .follow .heading .suggestions {
+  text-align: center;
+  margin: auto;
+  font-size: large;
+}
 .right .follow i {
   font-size: 1.4rem;
 }
@@ -39,6 +45,7 @@ main .container .right {
 .right .follow-request .profile-photo {
   position: relative;
   overflow: visible;
+  cursor: pointer;
 }
 
 .right .profile-photo img {
@@ -65,39 +72,15 @@ main .container .right {
 
 .btn-follow {
   background: var(--color-tertiary);
-  color:var(--bg-code);
+  color: var(--bg-code);
 }
 
-.right .friend-requests {
-  color: var(--color-gray);
-  margin: 1rem 0;
+.right .follow .message-body a.suggest-active {
+  color: var(--color-dark);
+  font-size: 1.2rem;
 }
 
-.right .request {
-  background-color: var(--color-white);
-  padding: var(--card-padding);
-  border-radius: var(--card-border-radius);
-  margin-bottom: 0.7rem;
-}
-
-.right .request .info {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.right .request .action {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.accept{
-  background: var(--color-success);
-  color:var(--bg-code);
-}
-
-.decline{
-  background: var(--color-danger);
-  color:var(--bg-code);
+.right .follow .message-body a.suggest-active:hover,
+.message-body p:hover {
+  color: var(--logo-color);
 }
