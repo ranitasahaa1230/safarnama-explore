@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { loginService, signUpService, updateUserService } from "../../services";
+import { loginService, signUpService, updateUserProfileService } from "../../services";
 
 const initialState = {
   token: localStorage.getItem("token") || null,
@@ -36,10 +36,10 @@ export const signUpUser = createAsyncThunk(
   }
 );
 
-export const updateUser = createAsyncThunk("auth/updateUser", async (userData, thunkAPI) => {
+export const updateUser = createAsyncThunk("auth/updateUser", async ({token,userData}, thunkAPI) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await updateUserService(token, userData);
+      const response = await updateUserProfileService(token, userData);
       return response.data.user;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);

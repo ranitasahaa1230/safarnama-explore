@@ -1,0 +1,56 @@
+.user-edit {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 1rem;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 9rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.flex-edit{
+    display: flex;
+    place-items: center;
+    flex-wrap: wrap;
+    gap: 1.9rem;
+}
+
+.ingo-edit{
+    font-size: 1rem;
+}
+
+.ingo-edit h3{
+    padding: 0.2rem;
+    font-size: 1.5rem;
+    margin: 0.2rem 0;
+}
+
+.user-date span{
+    padding: 0.12rem;
+    font-size: 1.15rem;
+}
+
+
+.desc-edit{
+    margin: 1rem 0.3rem;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.followers-edit{
+    display: flex;
+    place-items: center;
+    gap:2rem;
+}
+
+.text-centre{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
