@@ -29,6 +29,7 @@ export const MiddleGrid = () => {
         user.following.find((account) => account.username === post.username)
     );
     setFeedPost(filterByFollowing);
+        // eslint-disable-next-line
   }, [token, allPosts]);
 
   return (

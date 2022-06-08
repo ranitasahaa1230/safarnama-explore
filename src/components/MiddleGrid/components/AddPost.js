@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { addUserPost, editUserPost } from "../../../features/Home/postSlice";
+import { addUserPost } from "../../../features/Home/postSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useToast } from "../../../hooks";
-import { emojis, postLimit } from "../data";
+import { postLimit } from "../data";
 
 export const AddPost = () => {
   const [contents, setContent] = useState("");
   const dispatch = useDispatch();
   const [postMedia, setPostMedia] = useState(null);
-  const [showEmojis, setShowEmojis] = useState(false);
+  // const [showEmojis, setShowEmojis] = useState(false);
   const [isMediaUploading, setIsMediaUploading] = useState(false);
   const { showToast } = useToast();
   const { user } = useSelector((state) => state.auth);
@@ -28,6 +28,8 @@ export const AddPost = () => {
     dispatch(addUserPost(postData));
     showToast("Post Added", "success");
     setContent("");
+    setPostMedia("");
+    setIsMediaUploading("");
     // } else {
     //   dispatch(editPost({ ...currentEditPost, ...postData }));
     // }

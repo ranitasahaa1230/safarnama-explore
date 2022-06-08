@@ -29,6 +29,7 @@ export const RightSidebar = () => {
         showToast(error.message, "error");
       }
     })();
+        // eslint-disable-next-line
   }, [token]);
 
   useEffect(() => {
