@@ -13,7 +13,7 @@ export const LeftSidebar = () => {
   
   return (
     <div className="left">
-      <Link to="/profile" className="profile">
+      <Link to={`/profile/${user.username}`} className="profile">
         <div className="profile-photo">
           <img src={user.profileImage} alt="profile-pic" />
         </div>
