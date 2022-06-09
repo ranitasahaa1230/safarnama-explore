@@ -28,10 +28,9 @@ export const PostCard = ({ post }) => {
     postMedia,
     profileImage,
     bookmark,
+    original_filename,
   } = post;
 
-//   const userInfo =
-//     allUsers && allUsers?.find((user) => user.username === username);
   const isLiked = likedBy?.some((like) => like.username === user.username);
   const isBookmarked = bookmark?.some(
     (bookmarkPost) => bookmarkPost.username === user.username
@@ -72,15 +71,19 @@ export const PostCard = ({ post }) => {
     <div className="feed">
       <div className="head">
         <div className="user">
-          {profileImage && (
+          {profileImage ?(
             <div className="profile-photo">
               <img
                 loading="lazy"
-                src={profileImage.url}
-                alt={profileImage.original_filename}
+                src={profileImage}
+                alt={original_filename}
               />
             </div>
-          )}
+          ): (
+          <div className="profile-photo">
+            <h3> {firstName[0].toUpperCase()}</h3>
+          </div>
+        )}
           <div className="ingo">
             <h3>
               {firstName} {lastName}

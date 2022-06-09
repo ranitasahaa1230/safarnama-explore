@@ -5,7 +5,7 @@ main {
 
 main .container {
   display: grid;
-  grid-template-columns: 18vw auto 20vw;
+  grid-template-columns: 18vw auto 22vw;
   column-gap: 2rem;
   position: relative;
 }

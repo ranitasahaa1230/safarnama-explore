@@ -7,20 +7,30 @@ import { getAllPost } from "../../features/Home/postSlice";
 
 export const MiddleGrid = () => {
   const { allPosts } = useSelector((state) => state.post);
-  const { user } = useSelector((state) => state.auth);
+  const { user, token} = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const [feedPost, setFeedPost] = useState([]);
 
   useEffect(() => {
-    dispatch(getAllPost());
-  }, [dispatch]);
+    (async () => {
+      try {
+        const response = await dispatch(getAllPost());
+        if (response.error) {
+          throw new Error("Can't fetch posts.");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    })();
 
-  useEffect(() => {
-    if (allPosts) {
-      setFeedPost(allPosts);
-    }
-  }, [user, allPosts]);
-
+    const filterByFollowing = allPosts.filter(
+      (post) =>
+        user.username === post.username ||
+        user.following.find((account) => account.username === post.username)
+    );
+    setFeedPost(filterByFollowing);
+        // eslint-disable-next-line
+  }, [token, allPosts]);
 
   return (
     <div className="middle">

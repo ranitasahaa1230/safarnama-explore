@@ -9,7 +9,7 @@ export const AddPost = () => {
   const dispatch = useDispatch();
   const [postMedia, setPostMedia] = useState(null);
   // const [showEmojis, setShowEmojis] = useState(false);
-  // const [isMediaUploading, setIsMediaUploading] = useState(false);
+  const [isMediaUploading, setIsMediaUploading] = useState(false);
   const { showToast } = useToast();
   const { user } = useSelector((state) => state.auth);
   const onContentChanged = (e) => setContent(e.target.value);
@@ -29,8 +29,13 @@ export const AddPost = () => {
     showToast("Post Added", "success");
     setContent("");
     setPostMedia("");
+    setIsMediaUploading("");
     // } else {
     //   dispatch(editPost({ ...currentEditPost, ...postData }));
+    // }
+
+    // if (pathname !== "/" && !pathname.includes("profile")) {
+    //   navigate("/");
     // }
   };
 
@@ -41,8 +46,8 @@ export const AddPost = () => {
           <div className="profile-photo">
             <img
               loading="lazy"
-              src={user.profileImage?.url || ""}
-              alt={user.profileImage?.original_filename || ""}
+              src={user?.profileImage || ""}
+              alt={user.original_filename || ""}
             />
           </div>
         ) : (
@@ -62,7 +67,7 @@ export const AddPost = () => {
           className="btn btn-primary"
           disabled={
             !postMedia &&
-            (
+            (isMediaUploading ||
               contents.trim().length === 0 ||
               contents.trim().length > postLimit)
           }
