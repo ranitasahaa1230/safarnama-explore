@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import {
     fetchUserProfileService,
     fetchUserPostsService,
+    updateUserProfileService,
   } from "../../services";
   
   export const fetchUserProfile = createAsyncThunk(
@@ -30,7 +31,19 @@ import {
     }
   );
 
-  
+  export const updateUserProfile = createAsyncThunk(
+    "userProfile/updateUserProfile",
+    async ({ token, userData }, { rejectWithValue }) => {
+      try {
+        const { data } = await updateUserProfileService(token, userData);
+        const { user } = data;
+        return user;
+      } catch (error) {
+        return rejectWithValue(error.message);
+      }
+    }
+  );
+
   const profileSlice = createSlice({
     name: "profile",
     initialState: {
@@ -45,6 +58,9 @@ import {
       [fetchUserPosts.fulfilled]: (state, action) => {
         state.userPosts = action.payload;
       },
+    //   [updateUserProfile.fulfilled]: (state, action) => {
+    //   state.userProfile = action.payload;
+    // },
     },
   });
   

@@ -6,9 +6,11 @@ import {
 } from "../../../features/Home/postSlice";
 import { getDate } from "./utils";
 import { useToast } from "../../../hooks";
+import { Link, useNavigate } from "react-router-dom";
 
 export const PostCard = ({ post }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 //   const [editModal, setEditModal] = useState(false);
   const { showToast } = useToast();
   const { user} = useSelector((state) => state.auth);
@@ -70,7 +72,7 @@ export const PostCard = ({ post }) => {
   return (
     <div className="feed">
       <div className="head">
-        <div className="user">
+        <div className="user" onClick={()=>navigate(`/profile/${username}`)}>
           {profileImage ?(
             <div className="profile-photo">
               <img
@@ -107,6 +109,7 @@ export const PostCard = ({ post }) => {
         </span>
       </div>
 
+      <Link to={`/post/${_id}`} className="active-feed">
       {postMedia && (
         <div className="photo">
           <img
@@ -122,6 +125,7 @@ export const PostCard = ({ post }) => {
           <div className="content">{content}</div>
         </div>
       )}
+      </Link>
 
       <div className="action-button">
         <div className="interaction-buttons">

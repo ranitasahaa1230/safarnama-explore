@@ -3,7 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { LeftSidebar, RightSidebar } from "../../components";
 import { useParams } from "react-router-dom";
 import { PostCard } from "../../components/MiddleGrid/components/PostCard";
-import { fetchUserPosts, fetchUserProfile, getUserProfile } from "./profileSlice";
+import {
+  fetchUserPosts,
+  fetchUserProfile,
+  getUserProfile,
+} from "./profileSlice";
 import { useToast } from "../../hooks";
 import { followUser, getAllUsers, unfollowUser } from "./allUsersSlice";
 import "./ProfilePage.css";
@@ -39,7 +43,7 @@ export const ProfilePage = () => {
           throw new Error("Error in loading user profile");
         }
       } catch (error) {
-        showToast(error.message,"error");
+        showToast(error.message, "error");
       }
     })();
     // eslint-disable-next-line
@@ -60,12 +64,16 @@ export const ProfilePage = () => {
     // eslint-disable-next-line
   }, [userPosts]);
 
-  const checkFollowed = () =>
-    followers?.some((listUser) => listUser.username === user.username);
+  // const checkFollowed = () =>
+  //   followers?.some((listUser) => listUser.username === user.username);
+
+  const isFollowing = userProfile?.followers?.some(
+    (anyUser) => anyUser.username === user.username
+  );
 
   const followUnfollowHandler = async () => {
     try {
-      const response = checkFollowed()
+      const response = isFollowing
         ? await dispatch(unfollowUser({ token, userId: _id, dispatch }))
         : await dispatch(followUser({ token, userId: _id, dispatch }));
       if (response.error) {
@@ -79,7 +87,6 @@ export const ProfilePage = () => {
   const editProfileHandler = () => {
     // dispatch(SHOW_PROFILE_MODAL());
   };
-
 
   return (
     <main>
@@ -109,20 +116,21 @@ export const ProfilePage = () => {
                 </div>
 
                 {user.username === username && (
-                <button
-                  className="btn btn-primary"
-                  onClick={editProfileHandler}
-                >
-                  Edit Profile
-                </button>)}
+                  <button
+                    className="btn btn-primary"
+                    onClick={editProfileHandler}
+                  >
+                    Edit Profile
+                  </button>
+                )}
                 {user.username !== username && (
-                <button
-                  className="btn btn-primary"
-                  onClick={followUnfollowHandler}
-                >
-                  {checkFollowed() ? "Following" : "Follow"}
-                </button>
-              )}
+                  <button
+                    className="btn btn-primary"
+                    onClick={followUnfollowHandler}
+                  >
+                    {!isFollowing ? "Following" : "Follow"}
+                  </button>
+                )}
               </div>
 
               <div className="desc-edit">
@@ -141,8 +149,8 @@ export const ProfilePage = () => {
 
               <div className="followers-edit">
                 <span>{userPostsLoading ? 0 : userPosts.length} Posts</span>
-                <span>{followers.length} Followers</span>
-                <span>{following.length} Following</span>
+                <span> {followers?.length} Followers</span>
+                <span> {following?.length} Following</span>
               </div>
             </div>
           </div>

@@ -9,6 +9,10 @@
   border-radius: var(--border-radius);
 }
 
+.feed .active-feed{
+  color: var(--color-dark);
+}
+
 .middle .create-post input[type="text"] {
   justify-self: start;
   width: 100%;
@@ -36,6 +40,7 @@
 .middle .feed .user {
   display: flex;
   gap: 1rem;
+  cursor: pointer;
 }
 
 .middle .edit-post{

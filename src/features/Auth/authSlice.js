@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { loginService, signUpService, updateUserProfileService } from "../../services";
+import { loginService, signUpService,updateUserProfileService} from "../../services";
 
 const initialState = {
   token: localStorage.getItem("token") || null,
