@@ -128,7 +128,7 @@ export const ProfilePage = () => {
               <div className="desc-edit">
                 <div>
                   {bio}
-                  <br />☆ Frontend Developer
+                  <br />
                 </div>
                 <div className="text-bold">
                   Website:
@@ -141,8 +141,8 @@ export const ProfilePage = () => {
 
               <div className="followers-edit">
                 <span>{userPostsLoading ? 0 : userPosts.length} Posts</span>
-                <span>{followers.length} Followers</span>
-                <span>{following.length} Following</span>
+                {/* <span>{followers.length} Followers</span>
+                <span>{following.length} Following</span> */}
               </div>
             </div>
           </div>

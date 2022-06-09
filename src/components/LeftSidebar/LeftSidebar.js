@@ -15,7 +15,7 @@ export const LeftSidebar = () => {
     <div className="left">
       <Link to="/profile" className="profile">
         <div className="profile-photo">
-          <img src={user.profileImage?.url} alt="profile-pic" />
+          <img src={user.profileImage} alt="profile-pic" />
         </div>
         <div className="handle">
           <h4 className="profile-text">
