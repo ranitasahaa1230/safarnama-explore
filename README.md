@@ -1,25 +1,13 @@
 <div align="center">
 
 <img alt="safarnama explore logo" src="src/assets/images/logo.png" width="150px" height="150px" />
-<h2 align="center">Safarnama Explore</h2>
+<h2 align="center">Safarnama</h2>
 
-<!-- <p align="center">  
-      Wanderlust. Traveller. Sonder.
-Climb some mountains, get lost in the forests and get your dose of vitamin Sea. Why confine the beauty of the world only to your eyes?
-
-Click. Post. Share. Explore.
-
-What are you waiting for? Let the Safar begin!!
-<br />
-<br />
-
-  </p> -->
 </div>
 
 ## Table of Contents
 
-<!-- - [About](#about) -->
-
+- [About](#about)
 - [Technologies used](#-technologies-used)
 - [Features](#features)
 - [Live link](#live-link)
@@ -31,7 +19,7 @@ What are you waiting for? Let the Safar begin!!
 
 -  Wanderlust. Traveller. Sonder.
 Climb some mountains, get lost in the forests and get your dose of vitamin Sea. Why confine the beauty of the world only to your eyes?
-Click. Post. Share. Explore. What are you waiting for? Let the Safar begin!! 
+Click. Post. Share. Explore. What are you waiting for? Let the Safar begin!! A social media app for passionate travellers.
 
 ## 🛠 Technologies used
 
