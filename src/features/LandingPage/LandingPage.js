@@ -30,16 +30,10 @@ export const LandingPage = () => {
                 </button>
               </Link>
             ) : (
-              /* <Link to="/login" className="btn-primary-link">
-                Already have an account?{" "}
-                <span className="underline">Login</span>
-              </Link> */
               <Link to="/login">
                 <button className="btn btn-primary">
-                  {/* <Link to="/signup" className="signup-btn"> */}
                   Join Now
                 </button>
-                {/* </Link> */}
               </Link>
             )}
           </div>

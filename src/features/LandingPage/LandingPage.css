@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   max-width: 65rem;
-  margin: auto;
+  margin: 2rem auto;
   min-height: 90vh;
   padding: 1rem;
 }
@@ -129,6 +129,7 @@
 @media screen and (max-width: 768px) {
   .hero {
     padding: 2rem;
+    margin: 1.5rem;
   }
   .flex-hero {
     flex-direction: column;
@@ -141,7 +142,6 @@
     height: 3rem;
   }
   .hero-image-text {
-    font-size: 3rem;
     line-height: 1;
   }
   .hero-text {

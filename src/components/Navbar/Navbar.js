@@ -27,7 +27,7 @@ export const Navbar = () => {
                 <i className="fa-solid fa-magnifying-glass"></i>
                 <input
                   type="search"
-                  placeholder="Search for inspirations and projects"
+                  placeholder="Search your friends"
                 />
               </div>
             )}
