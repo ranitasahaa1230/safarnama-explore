@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import {
   fetchAllUsers,
   followUser,
@@ -16,6 +16,7 @@ import { actions } from "./actions";
 export const RightSidebar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const {pathname} = useLocation();
   const { user, token } = useSelector((state) => state.auth);
   const { sortBy } = useSelector((state) => state.post);
   const { users, usersLoading } = useSelector(getAllUsers);
@@ -76,7 +77,7 @@ export const RightSidebar = () => {
   return (
     <>
       <div className="right">
-        <div className="action">
+       {pathname==="/feed" && <div className="action">
           <h3>Sort By</h3>
           <div className="trending">
             <button
@@ -160,7 +161,7 @@ export const RightSidebar = () => {
               )}
             </div>
           </div>
-        </div>
+        </div>}
 
         {users.length > 0 ? (
           <div className="follow">
