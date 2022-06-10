@@ -1,7 +1,7 @@
 <div align="center">
 
 <img alt="safarnama explore logo" src="src/assets/images/logo.png" width="150px" height="150px" />
-<!-- <h2 align="center">Safarnama</h2> -->
+
 # Safarnama
 
 </div>
