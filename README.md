@@ -3,7 +3,7 @@
 <img alt="safarnama explore logo" src="src/assets/images/logo.png" width="150px" height="150px" />
 <h2 align="center">Safarnama Explore</h2>
 
-<p align="center">  
+<!-- <p align="center">  
       Wanderlust. Traveller. Sonder.
 Climb some mountains, get lost in the forests and get your dose of vitamin Sea. Why confine the beauty of the world only to your eyes?
 
@@ -13,7 +13,7 @@ What are you waiting for? Let the Safar begin!!
 <br />
 <br />
 
-  </p>
+  </p> -->
 </div>
 
 ## Table of Contents
@@ -27,9 +27,11 @@ What are you waiting for? Let the Safar begin!!
 - [Getting Started](#getting-started)
 - [Connect with me](#-connect-with-me)
 
-<!-- ## About
+## About
 
-- Learning Hub is a video-library platform for the ones who love coding or for the people who want to get started with coding, all curated in one place. -->
+-  Wanderlust. Traveller. Sonder.
+Climb some mountains, get lost in the forests and get your dose of vitamin Sea. Why confine the beauty of the world only to your eyes?
+Click. Post. Share. Explore. What are you waiting for? Let the Safar begin!! 
 
 ## 🛠 Technologies used
 
@@ -40,9 +42,6 @@ What are you waiting for? Let the Safar begin!!
 - [Mockbee](https://mockbee.netlify.app/) for backend
 
 ## Features
-
-<!-- **Home Page**:
-- The home page consists of different categories, clicking them navigates the user to the video listing page with that category applied as a filter. -->
 
 **Home Page**
 
