@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img alt="safarnama explore logo" src="src/assets/images/logo.png" width="150px" height="150px" />
+<h2 align="center">Safarnama Explore</h2>
 
-## Available Scripts
+<p align="center">  
+      Wanderlust. Traveller. Sonder.
+Climb some mountains, get lost in the forests and get your dose of vitamin Sea. Why confine the beauty of the world only to your eyes?
 
-In the project directory, you can run:
+Click. Post. Share. Explore.
 
-### `yarn start`
+What are you waiting for? Let the Safar begin!!
+<br />
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  </p>
+</div>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Table of Contents
 
-### `yarn test`
+<!-- - [About](#about) -->
+- [Technologies used](#-technologies-used)
+- [Features](#features)
+- [Live link](#live-link)
+- [Demo](#demo)
+- [Getting Started](#getting-started)
+- [Connect with me](#-connect-with-me)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- ## About
 
-### `yarn build`
+- Learning Hub is a video-library platform for the ones who love coding or for the people who want to get started with coding, all curated in one place. -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 Technologies used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ReactJS
+- Redux Toolkit
+- React Router v6
+- [Kolpotoru](https://kolpotoru-ui-design.netlify.app/) Component Library
+- [Mockbee](https://mockbee.netlify.app/) for backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `yarn eject`
+<!-- **Home Page**:
+- The home page consists of different categories, clicking them navigates the user to the video listing page with that category applied as a filter. -->
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Home Page**:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> - Landing page with hero image, cta button, and easy to navigate navbar
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**Authentication**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> - Login and Sign Up features that will allow profile creation, post creation, follow-unfollow and bookmarks
+> - After successful login, user can see a logout button on the sidebar
+> - A hide-show icon button that shows or hides password.
+> - Sign-up page from where user can sign-up using email, first name, last name, password & confirm password.
+> - User can logout and new user can login
 
-## Learn More
+  **Home Feed Page**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> - User can create posts from here
+> - Posts can be sorted by date or trending
+> - Suggested Users sidebar to follow unfollow users
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ **Post Features**
+> - All posts can be liked, unliked, bookmarked and commented on
 
-### Code Splitting
+**Edit/Delete Posts**
+> - Logged in user can edit and delete their post
+> - Editing post opens up a modal for editing the post from where image can be deleted or text content can be changed
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Bookmarks Page**
+> - Posts which are bookmarked show up here
+> - Posts can be removed from bookmarks
 
-### Analyzing the Bundle Size
+**Explore Page**
+> - All posts from the user, followed users as well as unfollowed users can be seen here sorted by latest
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Single Post Page and comments**
+> - Clicking on a post leads to single post page 
+> - All comments can be seen here sorted by latest
+> - New comments can be added
+> - User can edit or delete their comment
 
-### Making a Progressive Web App
+**User Profile Page**
+> - A profile page with all user details can be seen here
+> - User can add a bio and portfolio links as well as a profile picture
+<!-- > - Profile picture can be changed multiple times -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Live link
 
-### Advanced Configuration
+Safarnama(https://safarnama-explore.netlify.app/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Demo
 
-### Deployment
+<!-- https://user-images.githubusercontent.com/37957073/165530530-5b8c25e6-d919-4071-8fa0-cfb62f437c44.mp4 -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Getting Started
 
-### `yarn build` fails to minify
+## **How to install and run locally ?**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+$ https://github.com/ranitasahaa1230/safarnama-explore.git
+$ cd safarnama-explore
+$ npm install
+$ npm start
+```
+
+### Liked the project? Do please ⭐ it :)
+
+## Authors
+
+- [@ranitasahaa1230](https://github.com/ranitasahaa1230)
+
+## 👩‍💻 Connect with me
+
+<a href="https://twitter.com/Ifullofsunshine"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"/></a>
+<a href="https://www.linkedin.com/in/saharanitaa1230dreamer/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
