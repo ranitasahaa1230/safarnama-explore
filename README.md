@@ -56,7 +56,7 @@ What are you waiting for? Let the Safar begin!!
 - Sign-up page from where user can sign-up using email, first name, last name, password & confirm password.
 - User can logout and new user can login
 
-  **Home Feed Page**
+**Home Feed Page**
 
 - User can create posts from here
 - Posts can be sorted by date or trending
