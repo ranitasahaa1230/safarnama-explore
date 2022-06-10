@@ -6,3 +6,4 @@ export { SignUp } from "./Auth/SignUp";
 export { LandingPage } from "./LandingPage/LandingPage";
 export { EditProfile } from "./Profile/components/EditProfile/EditProfile";
 export {ProfilePage} from "./Profile/ProfilePage";
+export {SinglePost} from "./Home/SinglePost";

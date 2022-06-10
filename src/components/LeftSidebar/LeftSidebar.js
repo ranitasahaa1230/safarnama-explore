@@ -13,7 +13,7 @@ export const LeftSidebar = () => {
   
   return (
     <div className="left">
-      <Link to="/profile" className="profile">
+      <Link to={`/profile/${user.username}`} className="profile">
         <div className="profile-photo">
           <img src={user.profileImage} alt="profile-pic" />
         </div>
@@ -74,9 +74,9 @@ export const LeftSidebar = () => {
         </li>
       </div>
 
-      <button htmlFor="create-post" id="add-post" className="btn btn-primary">
+      {/* <button htmlFor="create-post" id="add-post" className="btn btn-primary">
         Create Post
-      </button>
+      </button> */}
     </div>
   );
 };

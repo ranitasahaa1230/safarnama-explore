@@ -128,7 +128,7 @@ export const ProfilePage = () => {
                     className="btn btn-primary"
                     onClick={followUnfollowHandler}
                   >
-                    {!isFollowing ? "Following" : "Follow"}
+                    {isFollowing ? "Following" : "Follow"}
                   </button>
                 )}
               </div>

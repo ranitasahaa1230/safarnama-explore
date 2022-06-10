@@ -2,12 +2,12 @@
   display: flex;
   align-items: flex-start;
   margin-top: 1rem;
-  gap: 1.4rem;
+  gap: 0.6rem;
   flex-wrap: wrap;
 }
 
 .profile-pic {
-  width: 9rem;
+  width: 8.2rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
   overflow: hidden;
@@ -17,7 +17,7 @@
     display: flex;
     place-items: center;
     flex-wrap: wrap;
-    gap: 1.9rem;
+    gap: 1rem;
 }
 
 .ingo-edit{

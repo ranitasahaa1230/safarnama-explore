@@ -1,8 +1,10 @@
 .middle .create-post {
   width: 100%;
+  height: 12rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  gap:0.2rem;
   margin-top: 1rem;
   background-color: var(--color-white);
   padding: 0.4rem var(--card-padding);
@@ -13,13 +15,21 @@
   color: var(--color-dark);
 }
 
+.middle .photo-flex{
+  width: 3.5rem;
+}
 .middle .create-post input[type="text"] {
   justify-self: start;
   width: 100%;
-  padding-left: 1rem;
+  /* height: max-content; */
   background-color: transparent;
   color: var(--color-dark);
-  margin-right: 1rem;
+  margin: 0.4rem;
+  padding: 1rem;
+  /* border: 2px solid var(--borders-color); */
+  border-radius: 0.5rem;
+  display: flex;
+  word-break: break-all;
 }
 
 /* feeds */
@@ -55,9 +65,14 @@
   margin: 0.7rem 0;
 }
 
-/* .middle .feed .photo .photo-url{
-  height: 18rem;
-} */
+.middle .feed .user-flex small{
+  font-size: 0.95rem;
+}
+
+.middle .feed .user-flex span{
+  margin: 0 0.95rem 0 0;
+  font-size: 1.05rem;
+}
 
 .middle .feed .photo .content{
   margin: 0.25rem 0.5rem;
@@ -123,3 +138,6 @@
   -webkit-text-stroke-color: var(--color-radius);
 }
 
+.card-share, .card-comment{
+  color: var(--color-radius);
+}
