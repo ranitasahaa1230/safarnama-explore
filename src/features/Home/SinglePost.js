@@ -25,6 +25,7 @@ export const SinglePost = () => {
         showToast("Can't fetch the post, try again later.","error");
       }
     })();
+    //eslint-disable-next-line
   }, [allPosts, postId]);
 
   return (
