@@ -1,5 +1,5 @@
 const actions = {
-    Default:"Default",
+    Trending:"Trending",
     Newest:"Newest",
     Oldest:"Oldest"
   };

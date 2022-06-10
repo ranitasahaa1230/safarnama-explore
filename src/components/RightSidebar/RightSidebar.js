@@ -10,7 +10,7 @@ import { useToast } from "../../hooks";
 import { BiTrendingUp } from "react-icons/bi";
 import { FaSort } from "react-icons/fa";
 import "./RightSidebar.css";
-import { setSortBy,setSort} from "../../features/Home/postSlice";
+import { setSortBy} from "../../features/Home/postSlice";
 import { actions } from "./actions";
 
 export const RightSidebar = () => {
@@ -18,11 +18,11 @@ export const RightSidebar = () => {
   const navigate = useNavigate();
   const {pathname} = useLocation();
   const { user, token } = useSelector((state) => state.auth);
-  const { sortBy, sort} = useSelector((state) => state.post);
+  const { sortBy} = useSelector((state) => state.post);
   const { users, usersLoading } = useSelector(getAllUsers);
   const { showToast } = useToast();
   const [openSort, showOpenSort] = useState(false);
-  const { Default, Newest, Oldest } = actions;
+  const { Newest, Oldest,Trending} = actions;
 
   const [suggestionsList, setSuggestionsList] = useState([]);
 
@@ -74,28 +74,12 @@ export const RightSidebar = () => {
     dispatch(setSortBy(sortOption));
   };
 
-  const selectSort = (sortOption) => {
-    dispatch(setSort(sortOption));
-  };
-
   return (
     <>
       <div className="right">
        {pathname==="/feed" && <div className="action">
           <h3>Sort By</h3>
           <div className="trending">
-            <button
-              className="btn-flex"
-              value="trending"
-              checked={sort === "TRENDING"}
-              onClick={() => {
-                selectSort("TRENDING");
-              }}
-            >
-              <BiTrendingUp size={25} />
-              <span>What's Trending</span>{" "}
-            </button>
-
             <div className="sorted">
               <div className="sorted__default" onClick={() => showSort()}>
                 <FaSort size={25} />
@@ -104,25 +88,6 @@ export const RightSidebar = () => {
 
               {openSort && (
                 <div className="sorted__videos">
-                  <label htmlFor="default" className="filter-categories">
-                    <input
-                      type="radio"
-                      name="uploaded"
-                      id="default"
-                      className="filter-categories"
-                      value="default"
-                      checked={sortBy === Default}
-                      onChange={() => {
-                        selectSortHandler(Default);
-                        setTimeout(() => {
-                          showSort();
-                        }, 1000);
-                      }}
-                    />
-                    Default
-                  </label>
-                  <br />
-
                   <label htmlFor="sort-by-latest" className="filter-categories">
                     <input
                       type="radio"
@@ -164,6 +129,19 @@ export const RightSidebar = () => {
                 </div>
               )}
             </div>
+
+            <button
+              className="btn-flex"
+              value="trending"
+              checked={sortBy === Trending}
+              onClick={() => {
+                selectSortHandler(Trending);
+              }}
+            >
+              <BiTrendingUp size={25} />
+              <span>What's Trending</span>{" "}
+            </button>
+
           </div>
         </div>}
 

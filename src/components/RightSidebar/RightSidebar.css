@@ -87,7 +87,7 @@ main .container .right {
 
 .trending{
   text-align: center;
-  margin: 0.6rem 2rem;
+  margin: 0.4rem;
 }
 .btn-flex{
   display: flex;
@@ -95,7 +95,7 @@ main .container .right {
   gap:0.5rem;
   background: var(--borders-color);
   color: var(--bg-code);
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 2.5rem;
   border-radius: 0.6rem;
   cursor: pointer;
 }
@@ -125,6 +125,7 @@ main .container .right {
 }
 .default{
   border-bottom: 2px solid var(--color-dark);
+  margin-bottom: 0.4rem;
 }
 .sorted__videos{
   display: flex;

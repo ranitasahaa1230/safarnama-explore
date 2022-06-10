@@ -4,10 +4,10 @@ import {
   likeAndDislikePost,
   addAndRemoveBookmark,
 } from "../../../features/Home/postSlice";
-import { getDate } from "./utils";
 import { useToast } from "../../../hooks";
 import { Link, useNavigate } from "react-router-dom";
 import { SHOW_MODAL } from "./Modal/postModalSlice";
+import { getTimeDiff } from "./getTimeDiff";
 
 export const PostCard = ({ post }) => {
   const dispatch = useDispatch();
@@ -26,7 +26,7 @@ export const PostCard = ({ post }) => {
     username,
     firstName,
     lastName,
-    updatedAt,
+    createdAt,
     // comments,
     postMedia,
     profileImage,
@@ -100,7 +100,10 @@ export const PostCard = ({ post }) => {
               <span className="text-muted">
                 <i>@{username}</i>
               </span>{" "}
-              <small className="text-bold">{getDate(updatedAt)}</small>
+              <small className="text-bold">
+                {" "}
+                {getTimeDiff(createdAt)}
+              </small>
             </div>
           </div>
         </div>

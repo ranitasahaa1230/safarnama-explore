@@ -37,8 +37,8 @@ export const posts = [
     firstName: "Ranita",
     lastName: "Saha",
     username: "ranitaasaha",
-    createdAt: "2021-06-25T16:43:34+05:30",
-    updatedAt: "2021-06-25T16:43:34+05:30",
+    createdAt: "2022-06-08T16:43:34+05:30",
+    updatedAt: "2022-06-08T16:43:34+05:30",
   },
   {
     _id: uuid(),
@@ -156,8 +156,8 @@ export const posts = [
     firstName: "Ranita",
     lastName: "Saha",
     username: "ranitaasaha",
-    createdAt: "2021-03-25T16:43:34+05:30",
-    updatedAt: "2021-04-25T16:43:34+05:30",
+    createdAt: "2021-12-25T16:43:34+05:30",
+    updatedAt: "2021-12-25T16:43:34+05:30",
   },
 
   {
@@ -223,8 +223,8 @@ export const posts = [
     firstName: "Ranita",
     lastName: "Saha",
     username: "ranitaasaha",
-    createdAt: "2021-03-25T16:43:34+05:30",
-    updatedAt: "2021-03-25T16:43:34+05:30",
+    createdAt: "2022-01-25T16:43:34+05:30",
+    updatedAt: "2022-01-25T16:43:34+05:30",
   },
 
   {
@@ -356,8 +356,8 @@ export const posts = [
     firstName: "Keshav",
     lastName: "Tarak",
     username: "keshavtarakk123",
-    createdAt: "2019-11-20T16:43:34+05:30",
-    updatedAt: "2019-11-20T16:43:34+05:30",
+    createdAt: "2022-02-20T16:43:34+05:30",
+    updatedAt: "2022-02-20T16:43:34+05:30",
   },
 
   {
@@ -390,8 +390,8 @@ export const posts = [
     firstName: "Nidhi",
     lastName: "Vasa",
     username: "nidhiivasaa",
-    createdAt: "2021-03-25T16:43:34+05:30",
-    updatedAt: "2021-04-25T16:43:34+05:30",
+    createdAt: "2022-03-20T16:43:34+05:30",
+    updatedAt: "2022-03-20T16:43:34+05:30",
   },
 
   {
@@ -472,7 +472,7 @@ export const posts = [
     firstName: "Ede",
     lastName: "Quitt",
     username: "edeeQuitt45",
-    createdAt: "2021-08-25T16:43:34+05:30",
-    updatedAt: "2021-08-25T16:43:34+05:30",
+    createdAt: "2022-03-10T16:43:34+05:30",
+    updatedAt: "2022-03-10T16:43:34+05:30",
   },
 ];

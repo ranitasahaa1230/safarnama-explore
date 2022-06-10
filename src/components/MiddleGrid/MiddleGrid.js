@@ -7,11 +7,11 @@ import { getAllPost } from "../../features/Home/postSlice";
 import { actions } from "../RightSidebar/actions";
 
 export const MiddleGrid = () => {
-  const { allPosts, sortBy,sort} = useSelector((state) => state.post);
+  const { allPosts, sortBy } = useSelector((state) => state.post);
   const { user, token } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const [feedPost, setFeedPost] = useState([]);
-  const { Default, Newest, Oldest } = actions;
+  const { Trending, Newest, Oldest } = actions;
 
   useEffect(() => {
     (async () => {
@@ -32,40 +32,27 @@ export const MiddleGrid = () => {
     );
     switch (sortBy) {
       case Newest:
-        setFeedPost(
+        return setFeedPost(
           filterByFollowing.sort(
             (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
           )
         );
-        break;
       case Oldest:
-        setFeedPost(
+        return setFeedPost(
           filterByFollowing.sort(
             (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
           )
         );
-        break;
-      // case "TRENDING":
-      //   setFeedPost(
-      //     filterByFollowing.sort(
-      //       (a, b) => b.likes.likeCount - a.likes.likeCount
-      //     )
-      //   );
-      //   break;
-      case Default:
-        setFeedPost(filterByFollowing);
-        break;
-          }
-        switch (sort) {
-          case "TRENDING":
-        setFeedPost(
+      case Trending:
+        return setFeedPost(
           filterByFollowing.sort(
             (a, b) => b.likes.likeCount - a.likes.likeCount
           )
         );
-        break;
+      default:
+        throw new Error("Action type not found.");
     }
-     // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [token, allPosts, sortBy]);
 
   return (
