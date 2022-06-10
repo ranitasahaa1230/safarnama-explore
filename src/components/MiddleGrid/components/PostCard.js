@@ -7,6 +7,7 @@ import {
 import { getDate } from "./utils";
 import { useToast } from "../../../hooks";
 import { Link, useNavigate } from "react-router-dom";
+import { SHOW_MODAL } from "./Modal/postModalSlice";
 
 export const PostCard = ({ post }) => {
   const dispatch = useDispatch();
@@ -39,7 +40,8 @@ export const PostCard = ({ post }) => {
   );
 
   const editHandler = () => {
-    // dispatch(openPostModal(post));
+      dispatch(SHOW_MODAL(true));
+      // dispatch(SET_POST_TO_EDIT(post));
   };
 
   const likeDislikeHandler = () => {
@@ -72,59 +74,58 @@ export const PostCard = ({ post }) => {
   return (
     <div className="feed">
       <div className="head">
-        <div className="user" onClick={()=>navigate(`/profile/${username}`)}>
-          {profileImage ?(
+        <div className="user" onClick={() => navigate(`/profile/${username}`)}>
             <div className="profile-photo">
-              <img
-                loading="lazy"
-                src={profileImage}
-                alt={original_filename}
-              />
+              <img loading="lazy" 
+            src={username === user.username ? user.profileImage : profileImage}
+              alt={original_filename} />
             </div>
-          ): (
-          <div className="profile-photo">
-            <h3> {firstName[0].toUpperCase()}</h3>
-          </div>
-        )}
-          <div className="ingo">
+          
+          <div className="ingo-user">
             <h3>
               {firstName} {lastName}
             </h3>
-            <div className="user-date">
-              <span className="text-muted">@{username}</span>
-              <small className="text-bold"> {getDate(updatedAt)}</small>
+            <div className="user-flex">
+              <span className="text-muted">
+                <i>@{username}</i>
+              </span>{" "}
+              <small className="text-bold">{getDate(updatedAt)}</small>
             </div>
           </div>
         </div>
-        <span className="edit-post">
-          <i className="uil uil-ellipsis-h"></i>
-          <i className="fa-solid fa-pen" onClick={() => editHandler()}></i>
-          <i
-            className="fa-solid fa-trash"
-            onClick={() => {
-              dispatch(deleteUserPost(_id));
-              showToast("Post Deleted Successfully!", "success");
-            }}
-          ></i>
-        </span>
+
+        {user.username === username && (
+          <span className="edit-post">
+            <i className="uil uil-ellipsis-h"></i>
+
+            <i className="fa-solid fa-pen" onClick={editHandler}></i>
+            <i
+              className="fa-solid fa-trash"
+              onClick={() => {
+                dispatch(deleteUserPost(_id));
+                showToast("Post Deleted Successfully!", "success");
+              }}
+            ></i>
+          </span>
+        )}
       </div>
 
       <Link to={`/post/${_id}`} className="active-feed">
-      {postMedia && (
-        <div className="photo">
-          <img
-            src={postMedia.url}
-            alt={postMedia.original_filename}
-            className="photo-url"
-          />
-        </div>
-      )}
+        {postMedia && (
+          <div className="photo">
+            <img
+              src={postMedia.url}
+              alt={postMedia.original_filename}
+              className="photo-url"
+            />
+          </div>
+        )}
 
-      {content && (
-        <div className="photo">
-          <div className="content">{content}</div>
-        </div>
-      )}
+        {content && (
+          <div className="photo">
+            <div className="content">{content}</div>
+          </div>
+        )}
       </Link>
 
       <div className="action-button">
