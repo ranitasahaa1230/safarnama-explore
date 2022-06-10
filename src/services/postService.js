@@ -25,18 +25,15 @@ export const deletePostService = (postId, token) =>
     },
   });
 
-export const editPostService = (postData, token) =>
-  axios.post(
-    `/api/posts/edit/${postData._id}`,
-    {
-      postData,
-    },
-    {
-      headers: {
-        authorization: token,
-      },
-    }
-  );
+ export const editPostService = (token, postData, postId) => {
+    return axios.post(
+      `/api/posts/edit/${postId}`,
+      { postData },
+      {
+        headers: { authorization: token },
+      }
+    );
+  };
 
 export const likePostService = (postId, token) =>
   axios.post(

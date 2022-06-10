@@ -15,6 +15,7 @@ const initialState = {
   allPosts: [],
   userPosts: [],
   // bookmarks: [],
+  sortBy: "Default",
 };
 
 export const getAllPost = createAsyncThunk(
@@ -55,14 +56,14 @@ export const addUserPost = createAsyncThunk(
 );
 
 export const editUserPost = createAsyncThunk(
-  "post/editUserPost",
-  async (postData, thunkAPI) => {
+  "posts/editUserPost",
+  async ({ token, postData, postId }, { rejectWithValue }) => {
     try {
-      const token = localStorage.getItem("token");
-      const response = await editPostService(postData, token);
-      return response.data;
+      const { data } = await editPostService(token, postData, postId);
+      const { posts } = data;
+      return posts;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error);
+      return rejectWithValue(error.message);
     }
   }
 );
@@ -113,8 +114,11 @@ export const addAndRemoveBookmark = createAsyncThunk(
 const postSlice = createSlice({
   name: "post",
   initialState,
-  reducers: {},
-  extraReducers: {
+  reducers: {
+    setSortBy: (state, action) => {
+      state.sortBy = action.payload;
+    },
+  },  extraReducers: {
     [getAllPost.pending]: (state) => {
       state.postStatus = "loading";
     },
@@ -131,7 +135,7 @@ const postSlice = createSlice({
     },
     [getUserPost.fulfilled]: (state, { payload }) => {
       state.postStatus = "fulfilled";
-      state.userPosts = payload;
+      state.userPosts = payload.posts.reverse();
     },
     [getUserPost.rejected]: (state, { payload }) => {
       state.postStatus = "rejected";
@@ -151,9 +155,9 @@ const postSlice = createSlice({
     [editUserPost.pending]: (state) => {
       state.postStatus = "pending";
     },
-    [editUserPost.fulfilled]: (state, action) => {
+    [editUserPost.fulfilled]: (state, {payload}) => {
       state.postStatus = "fulfilled";
-      state.allPosts = action.payload.posts;
+      state.allPosts = payload.posts.reverse();
     },
     [editUserPost.rejected]: (state, action) => {
       state.postStatus = "rejected";
@@ -194,5 +198,7 @@ const postSlice = createSlice({
     },
   },
 });
+
+export const { setSortBy } = postSlice.actions;
 
 export default postSlice.reducer;
