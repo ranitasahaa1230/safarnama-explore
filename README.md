@@ -19,6 +19,7 @@ What are you waiting for? Let the Safar begin!!
 ## Table of Contents
 
 <!-- - [About](#about) -->
+
 - [Technologies used](#-technologies-used)
 - [Features](#features)
 - [Live link](#live-link)
@@ -45,45 +46,51 @@ What are you waiting for? Let the Safar begin!!
 
 **Home Page**:
 
-> - Landing page with hero image, cta button, and easy to navigate navbar
+- Landing page with hero image, cta button, and easy to navigate navbar
 
 **Authentication**
 
-> - Login and Sign Up features that will allow profile creation, post creation, follow-unfollow and bookmarks
-> - After successful login, user can see a logout button on the sidebar
-> - A hide-show icon button that shows or hides password.
-> - Sign-up page from where user can sign-up using email, first name, last name, password & confirm password.
-> - User can logout and new user can login
+- Login and Sign Up features that will allow profile creation, post creation, follow-unfollow and bookmarks
+- After successful login, user can see a logout button on the sidebar
+- A hide-show icon button that shows or hides password.
+- Sign-up page from where user can sign-up using email, first name, last name, password & confirm password.
+- User can logout and new user can login
 
   **Home Feed Page**
 
-> - User can create posts from here
-> - Posts can be sorted by date or trending
-> - Suggested Users sidebar to follow unfollow users
+- User can create posts from here
+- Posts can be sorted by date or trending
+- Suggested Users sidebar to follow unfollow users
 
- **Post Features**
-> - All posts can be liked, unliked, bookmarked and commented on
+**Post Features**
+
+- All posts can be liked, unliked, bookmarked and commented on
 
 **Edit/Delete Posts**
-> - Logged in user can edit and delete their post
-> - Editing post opens up a modal for editing the post from where image can be deleted or text content can be changed
+
+- Logged in user can edit and delete their post
+- Editing post opens up a modal for editing the post from where image can be deleted or text content can be changed
 
 **Bookmarks Page**
-> - Posts which are bookmarked show up here
-> - Posts can be removed from bookmarks
+
+- Posts which are bookmarked show up here
+- Posts can be removed from bookmarks
 
 **Explore Page**
-> - All posts from the user, followed users as well as unfollowed users can be seen here sorted by latest
+
+- All posts from the user, followed users as well as unfollowed users can be seen here sorted by latest
 
 **Single Post Page and comments**
-> - Clicking on a post leads to single post page 
-> - All comments can be seen here sorted by latest
-> - New comments can be added
-> - User can edit or delete their comment
+
+- Clicking on a post leads to single post page
+- All comments can be seen here sorted by latest
+- New comments can be added
+- User can edit or delete their comment
 
 **User Profile Page**
-> - A profile page with all user details can be seen here
-> - User can add a bio and portfolio links as well as a profile picture
+
+- A profile page with all user details can be seen here
+- User can add a bio and portfolio links as well as a profile picture
 <!-- > - Profile picture can be changed multiple times -->
 
 ## Live link
