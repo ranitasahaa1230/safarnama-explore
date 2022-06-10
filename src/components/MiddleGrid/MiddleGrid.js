@@ -7,7 +7,7 @@ import { getAllPost } from "../../features/Home/postSlice";
 import { actions } from "../RightSidebar/actions";
 
 export const MiddleGrid = () => {
-  const { allPosts, sortBy } = useSelector((state) => state.post);
+  const { allPosts, sortBy,sort} = useSelector((state) => state.post);
   const { user, token } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const [feedPost, setFeedPost] = useState([]);
@@ -45,18 +45,25 @@ export const MiddleGrid = () => {
           )
         );
         break;
-      case "TRENDING":
+      // case "TRENDING":
+      //   setFeedPost(
+      //     filterByFollowing.sort(
+      //       (a, b) => b.likes.likeCount - a.likes.likeCount
+      //     )
+      //   );
+      //   break;
+      case Default:
+        setFeedPost(filterByFollowing);
+        break;
+          }
+        switch (sort) {
+          case "TRENDING":
         setFeedPost(
           filterByFollowing.sort(
             (a, b) => b.likes.likeCount - a.likes.likeCount
           )
         );
         break;
-      case Default:
-        setFeedPost(filterByFollowing);
-        break;
-      default:
-        throw new Error("Action type not found.");
     }
      // eslint-disable-next-line
   }, [token, allPosts, sortBy]);

@@ -138,3 +138,6 @@
   -webkit-text-stroke-color: var(--color-radius);
 }
 
+.card-share, .card-comment{
+  color: var(--color-radius);
+}

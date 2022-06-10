@@ -10,7 +10,7 @@ import { useToast } from "../../hooks";
 import { BiTrendingUp } from "react-icons/bi";
 import { FaSort } from "react-icons/fa";
 import "./RightSidebar.css";
-import { setSortBy } from "../../features/Home/postSlice";
+import { setSortBy,setSort} from "../../features/Home/postSlice";
 import { actions } from "./actions";
 
 export const RightSidebar = () => {
@@ -18,7 +18,7 @@ export const RightSidebar = () => {
   const navigate = useNavigate();
   const {pathname} = useLocation();
   const { user, token } = useSelector((state) => state.auth);
-  const { sortBy } = useSelector((state) => state.post);
+  const { sortBy, sort} = useSelector((state) => state.post);
   const { users, usersLoading } = useSelector(getAllUsers);
   const { showToast } = useToast();
   const [openSort, showOpenSort] = useState(false);
@@ -74,6 +74,10 @@ export const RightSidebar = () => {
     dispatch(setSortBy(sortOption));
   };
 
+  const selectSort = (sortOption) => {
+    dispatch(setSort(sortOption));
+  };
+
   return (
     <>
       <div className="right">
@@ -83,9 +87,9 @@ export const RightSidebar = () => {
             <button
               className="btn-flex"
               value="trending"
-              checked={sortBy === "TRENDING"}
+              checked={sort === "TRENDING"}
               onClick={() => {
-                selectSortHandler("TRENDING");
+                selectSort("TRENDING");
               }}
             >
               <BiTrendingUp size={25} />

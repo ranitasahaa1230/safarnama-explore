@@ -16,6 +16,7 @@ const initialState = {
   userPosts: [],
   // bookmarks: [],
   sortBy: "Default",
+  sort:"",
 };
 
 export const getAllPost = createAsyncThunk(
@@ -118,6 +119,9 @@ const postSlice = createSlice({
     setSortBy: (state, action) => {
       state.sortBy = action.payload;
     },
+    setSort: (state, action) => {
+      state.sort = action.payload;
+    },
   },  extraReducers: {
     [getAllPost.pending]: (state) => {
       state.postStatus = "loading";
@@ -199,6 +203,6 @@ const postSlice = createSlice({
   },
 });
 
-export const { setSortBy } = postSlice.actions;
+export const { setSortBy, setSort} = postSlice.actions;
 
 export default postSlice.reducer;

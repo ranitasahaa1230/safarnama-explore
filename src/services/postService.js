@@ -57,3 +57,7 @@ export const dislikePostService = (postId, token) =>
     }
   );
 
+  export const fetchSinglePostService = (postId) => {
+    return axios.get(`/api/posts/${postId}`);
+  };
+  

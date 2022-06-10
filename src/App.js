@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Navbar, NotFound, Toast } from "./components";
+import { Navbar, NotFound, PrivateRoute, Toast } from "./components";
 import {
   Bookmark,
   Explore,
@@ -9,6 +9,7 @@ import {
   SignUp,
   LandingPage,
   ProfilePage,
+  SinglePost,
 } from "./features";
 import Mockman from "mockman-js";
 
@@ -18,6 +19,7 @@ function App() {
       <Navbar />
       <Toast />
       <Routes>
+        <Route path="/" element={<PrivateRoute />}/>
         <Route path="/" element={<LandingPage />} />
         <Route path="/feed" element={<Home />} />
         <Route path="/mockman" element={<Mockman />} />
@@ -26,6 +28,7 @@ function App() {
         <Route path="/explore" element={<Explore />} />
         <Route path="/bookmark" element={<Bookmark />} />
         <Route path="/profile/:username" element={<ProfilePage />} />
+        <Route path="/post/:postId" element={<SinglePost />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
