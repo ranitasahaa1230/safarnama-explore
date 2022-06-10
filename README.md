@@ -44,9 +44,9 @@ What are you waiting for? Let the Safar begin!!
 <!-- **Home Page**:
 - The home page consists of different categories, clicking them navigates the user to the video listing page with that category applied as a filter. -->
 
-**Home Page**:
+**Home Page**
 
-- Landing page with hero image, cta button, and easy to navigate navbar
+-  Landing page with hero image, cta button, and easy to navigate navbar
 
 **Authentication**
 
