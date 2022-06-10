@@ -129,14 +129,14 @@ export const AddPost = ({ modal }) => {
         {contents.length === 0 ? (
             isPostEditing ? (
               <button
-                className="btn btn-primary"
+                className="btn-post"
                 disabled
               >
                 Save Post
               </button>
             ) : (
               <button
-                className="btn btn-primary"
+                className="btn-post"
                 disabled
               >
                 Post
@@ -145,14 +145,14 @@ export const AddPost = ({ modal }) => {
           ) : isPostEditing ? (
             <button
               onClick={editPostHandler}
-              className="btn btn-primary"
+              className="btn-post"
             >
               Save Post
             </button>
           ) : (
             <button
               onClick={addPostHandler}
-              className="btn btn-primary"
+              className="btn-post"
             >
               Post
             </button>

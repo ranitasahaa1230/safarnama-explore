@@ -181,7 +181,7 @@ export const RightSidebar = () => {
                     </Link>
                   </div>
                   <button
-                    className="btn btn-follow"
+                    className="btn-follow"
                     onClick={() => {
                       followClickHandler(suggestUser._id);
                     }}

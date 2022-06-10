@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  /* gap: 1rem; */
   margin: auto;
   width: 100%;
 }
@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   place-items: center;
-  gap: 1.25rem;
+  /* gap: 1.25rem; */
   text-align: center;
   align-self: center;
   flex-shrink: 1;
@@ -36,6 +36,7 @@
   gap: 0.5rem;
   place-items: center;
   flex-wrap: wrap;
+  margin-top: 2.8rem;
 }
 
 .hero-image {
@@ -46,9 +47,9 @@
 .hero-image-text {
   font-weight: 800;
   font-family: "Tiro Kannada", serif;
-  font-size: 2.45rem;
+  font-size: 2rem;
   line-height: 2.25rem;
-  background: -webkit-linear-gradient(var(--logo-color), black);
+  background: -webkit-linear-gradient(var(--color-scroll), black);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
@@ -56,11 +57,27 @@
 
 .hero-text {
   font-size: 1.8rem;
-  line-height: 1.95rem;
-  color: var(--borders-color);
-  font-weight: normal;
+  line-height: 1.45;
+  font-family: "Tiro Kannada", serif;
+  margin-bottom:1rem;
+  font-style: normal;
 }
 
+.hero-p{
+  background: -webkit-linear-gradient(var(--color-radius), black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0.8rem 0;
+}
+
+.hero-exp{
+  color: var(--borders-color);
+  margin: 0.8rem 0;
+}
+
+.hero-wait{
+  color: var(--color-dark);
+}
 .auth-buttons {
   display: flex;
   flex-direction: column;

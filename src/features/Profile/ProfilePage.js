@@ -117,7 +117,7 @@ export const ProfilePage = () => {
 
                 {user.username === username && (
                   <button
-                    className="btn btn-primary"
+                    className="btn-edit"
                     onClick={editProfileHandler}
                   >
                     Edit Profile
@@ -125,7 +125,7 @@ export const ProfilePage = () => {
                 )}
                 {user.username !== username && (
                   <button
-                    className="btn btn-primary"
+                    className="btn-edit"
                     onClick={followUnfollowHandler}
                   >
                     {isFollowing ? "Following" : "Follow"}

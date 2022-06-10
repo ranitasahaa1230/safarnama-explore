@@ -31,7 +31,7 @@ export const Footer = () => {
           <i className="fab fa-linkedin icon"></i>
         </a>
       </div>
-      <span className="footer-copyright">© 2022 || Talk It Out</span>
+      <span className="footer-copyright">© 2022 || Safarnama</span>
     </footer>
   );
 };

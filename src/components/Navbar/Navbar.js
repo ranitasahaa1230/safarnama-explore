@@ -18,7 +18,7 @@ export const Navbar = () => {
                 <img src={logo} alt="logo" className="header-logo" />
               </Link>
               <Link to="/" className="header-name">
-                <h2 className="log">Talk It Out</h2>
+                <h2 className="log">Safarnama</h2>
               </Link>
             </div>
 

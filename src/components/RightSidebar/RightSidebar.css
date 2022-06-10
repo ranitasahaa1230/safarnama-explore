@@ -73,6 +73,12 @@ main .container .right {
 .btn-follow {
   background: var(--color-tertiary);
   color: var(--bg-code);
+  padding: var(--btn-padding);
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-size: 0.9rem;
 }
 
 .right .follow .message-body a.suggest-active {
