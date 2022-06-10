@@ -1,0 +1,23 @@
+.edit-profile-text-container {
+    background-color: var(--social-secondary);
+    width: 100%;
+    height: auto;
+    background: red;
+    display: flex;
+    place-items: center;
+  }
+
+  .edit-post-container{
+      padding: 1rem;
+      position: relative;
+  }
+  .btn-no-decor{
+      position: absolute;
+  }
+
+  .edit-post-modal-wrapper{
+      background: green;
+      display: flex;
+    place-items: center;
+    z-index: 1000;
+  }

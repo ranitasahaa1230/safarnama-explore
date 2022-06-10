@@ -74,9 +74,9 @@ export const LeftSidebar = () => {
         </li>
       </div>
 
-      <button htmlFor="create-post" id="add-post" className="btn btn-primary">
+      {/* <button htmlFor="create-post" id="add-post" className="btn btn-primary">
         Create Post
-      </button>
+      </button> */}
     </div>
   );
 };
