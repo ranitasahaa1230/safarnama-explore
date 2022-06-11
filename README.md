@@ -1,18 +1,9 @@
 <h1 align="center">
 <img alt="safarnama explore logo" src="src/assets/images/logo.png" width="200px" height="200px" />
-
+  <br />
+  
 ## Safarnama
 </h1>
-
-<!-- <h1 align="center">
-  <br />
-  <a href="https://readers-space.netlify.app/">
-      <img src="https://user-images.githubusercontent.com/51514137/169649556-35b3183d-77c4-4435-a56c-597633da3533.png" width="200"/>
-  </a>
-  <br />
-  ReadersSpace 
-</h1> -->
-
 
 ## Table of Contents
 
