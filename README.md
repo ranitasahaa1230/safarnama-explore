@@ -1,8 +1,7 @@
 <h1 align="center">
 <img alt="safarnama explore logo" src="src/assets/images/logo.png" width="200px" height="200px" />
   <br />
-  
-## Safarnama
+Safarnama
 </h1>
 
 ## Table of Contents
