@@ -10,6 +10,7 @@ main .container .right {
   background-color: var(--color-white);
   border-radius: var(--card-border-radius);
   padding: var(--card-padding);
+  box-shadow: 0 2px 3px 1px var(--logg-color);
 }
 
 .right .follow .heading {
@@ -114,7 +115,9 @@ main .container .right {
   background-color: var(--color-white);
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
-  margin-bottom: 0.7rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 4px 0px var(--color-gray);
+  margin-top: 0.8rem;
 }
 .sorted{
   cursor: pointer;

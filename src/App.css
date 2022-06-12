@@ -28,6 +28,7 @@
   --accent-color: #606060dc;
   --trash-color: #ff0000;
   --footer-color: #14213d;
+  --shadow-color:#db8cb4;
 
   --border-radius: 2rem;
   --card-border-radius: 1rem;
@@ -66,10 +67,10 @@
   background: var(--color-light);
   --color-dark: var(--bg-code);
   --color-radius: hsl(var(--primary-color-hue), 75%, 60%);
-  /* --color-tertiary: hsl(var(--primary-color-hue), 75%, 60%); */
   --logo-color: var(--bg-code);
   --log-color: #007fff;
   --borders-color:var(--border-color);
+  --logg-color: var(--color-primary);
 }
 
 .light__mode {
@@ -77,6 +78,8 @@
   --color-light: hsl(var(--primary-color-hue),30%,var(--light-color-lightness));
   --color-dark: hsl(var(--primary-color-hue), 30%, var(--dark-color-lightness));
   --log-color: #007fff;
+  --logg-color:var(--border-color);
+  --shadow-color:var(--border-color);
 }
 
 body {
