@@ -3,6 +3,7 @@ main .container .right {
   position: sticky;
   top: var(--sticky-top-right);
   bottom: 0;
+  color: var(--color-dark);
 }
 
 .right .follow {

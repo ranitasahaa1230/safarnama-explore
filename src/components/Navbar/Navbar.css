@@ -32,7 +32,7 @@ nav .container {
 .header-name{
   cursor: pointer;
   font-family: 'Tiro Kannada', serif;
-  background: -webkit-linear-gradient(var(--logo-color), black);
+  background: -webkit-linear-gradient(var(--logo-color), var(--color-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
@@ -43,6 +43,7 @@ nav .container {
   background-color: var(--color-light);
   border-radius: var(--border-radius);
   padding: var(--search-padding);
+  color: var(--color-dark);
 }
 
 .search-bar input[type="search"] {
@@ -61,4 +62,13 @@ nav .create {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+.mode__icons{
+  cursor: pointer;
+  color: var(--logo-color);
+}
+
+.mode__icons:hover{
+  color: var(--color-radius);
 }

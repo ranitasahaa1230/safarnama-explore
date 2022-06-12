@@ -4,6 +4,7 @@
   margin-top: 1rem;
   gap: 0.6rem;
   flex-wrap: wrap;
+  color: var(--color-dark);
 }
 
 .profile-pic {

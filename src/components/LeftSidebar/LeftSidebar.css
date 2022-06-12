@@ -2,11 +2,12 @@
   margin-top: 1rem;
   background: var(--color-white);
   border-radius: var(--card-border-radius);
+  box-shadow: 0 0 10px 0 var(--accent-color);
 }
 
 .left .profile .profile-text,
 .left .profile .profile-text:hover {
-  background: -webkit-linear-gradient(var(--color-scroll), black);
+  background: -webkit-linear-gradient(var(--color-scroll), var(--color-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 610;

@@ -7,7 +7,7 @@ import "./LandingPage.css";
 export const LandingPage = () => {
   const { token } = useSelector((state) => state.auth);
   return (
-    <>
+    <main>
       <section className="hero">
         <div className="flex-hero">
           <div className="hero-text-content">
@@ -43,6 +43,6 @@ export const LandingPage = () => {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 };

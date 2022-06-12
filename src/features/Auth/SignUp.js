@@ -45,8 +45,9 @@ export function SignUp() {
   };
 
   return (
-    <div className="app__container">
-      <div className="form-box">
+    <main>
+    <div className="app__container" id="box-signup">
+      <div className="form-box box-signup">
         <div className="button-box">
           <h3 className="toggle-btn">SIGN UP</h3>
         </div>
@@ -188,5 +189,6 @@ export function SignUp() {
         </form>
       </div>
     </div>
+    </main>
   );
 }

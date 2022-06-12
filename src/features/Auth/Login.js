@@ -42,6 +42,7 @@ export function Login() {
   }
 
   return (
+    <main>
     <div className="app__container" id="box-btn">
       <div className="form-box box-btn">
         <div className="button-box">
@@ -135,5 +136,6 @@ export function Login() {
         </form>
       </div>
     </div>
+    </main>
   );
 }

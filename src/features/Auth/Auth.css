@@ -5,7 +5,11 @@
 }
 
 #box-btn .box-btn{
-    top:6rem;
+    top:8rem;
+}
+
+#box-signup .box-signup{
+  margin-top: 3.5vh;
 }
 
 .form-box {
@@ -16,8 +20,8 @@
     top:3.5rem;
     margin: auto;
     border-radius: 1rem;
-    box-shadow: 0 0 10px 0 var(--logo-color);
-    /* color: var(--bg-code); */
+    box-shadow: 0 0 10px 0 var(--log-color);
+    color: var(--color-dark);
   }
 
   .button-box {
@@ -44,7 +48,7 @@
     border: 1px solid var(--accent-color);
     background: transparent;
     border-radius: 0.2rem;
-    /* color: var(--bg-code); */
+    color: var(--color-dark);
     padding: 0.45rem 0.4rem;
     font-size: 0.95rem;
   }
@@ -124,13 +128,13 @@
     margin: 0.35rem 0.5rem;
   }
   .primary-account {
-    /* color: var(--bg-code); */
+    color: var(--color-dark);
     text-decoration: none;
     border-bottom: 2px solid var(--borders-color);
     margin-left: 0.5rem;
   }
   a.primary-account:hover{
-      color: var(--logo-color);
+      color: var(--log-color);
   }
   
   .forget-psswd {
@@ -156,7 +160,7 @@
     width: 100%;
     border: none;
     background: transparent;
-    /* color: var(--bg-code); */
+    color: var(--color-dark);
     padding: 0.45rem 0.4rem;
     font-size: 0.95rem;
   }

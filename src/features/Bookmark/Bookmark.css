@@ -2,6 +2,7 @@
     text-align: center;
     margin-top: 1rem;
     font-size: 1.4rem;
+    color: var(--color-dark);
 }
 
 .no-bookmarks{

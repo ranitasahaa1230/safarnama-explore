@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Navbar, NotFound, Toast } from "./components";
+import { Footer, Navbar, NotFound, Toast } from "./components";
 import {
   Bookmark,
   Explore,
@@ -12,10 +12,13 @@ import {
   SinglePost,
 } from "./features";
 import Mockman from "mockman-js";
+import { useTheme } from "./features/theme-context";
 
 function App() {
+  const { theme } = useTheme();
+
   return (
-    <div className="App">
+    <div className={theme ? "light__mode" : "dark__mode"}>
       <Navbar />
       <Toast />
       <Routes>
@@ -30,6 +33,16 @@ function App() {
         <Route path="/post/:postId" element={<SinglePost />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <button
+        className="button button-floating"
+        onClick={() => {
+          window.scrollTo(0, 0);
+        }}
+      >
+        {" "}
+        <i className="fas fa-arrow-up"></i>
+      </button>
+      <Footer />
     </div>
   );
 }

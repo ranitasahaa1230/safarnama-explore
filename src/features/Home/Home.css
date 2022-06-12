@@ -1,6 +1,5 @@
 main {
-  position: relative;
-  top: 5.4rem;
+  min-height: calc(100vh);
 }
 
 main .container {
@@ -8,6 +7,8 @@ main .container {
   grid-template-columns: 18vw auto 22vw;
   column-gap: 2rem;
   position: relative;
+  margin-top: 4.5rem;
+  padding-top: 1rem;
 }
 
 main .container .left {
