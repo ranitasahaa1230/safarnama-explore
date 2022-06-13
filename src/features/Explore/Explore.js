@@ -5,7 +5,7 @@ import { PostCard } from "../../components/MiddleGrid/components/PostCard";
 import { getAllPost } from "../Home/postSlice";
 
 export const Explore = () => {
-  const { allPosts, loading } = useSelector((state) => state.post);
+  const { allPosts} = useSelector((state) => state.post);
   const { token } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const [explorePosts, setExplorePosts] = useState([]);
