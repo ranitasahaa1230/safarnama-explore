@@ -13,5 +13,6 @@
 }
 
 .no-bookmarks button{
-    margin-top: 0.4rem;
+    margin: 0.8rem auto;
+    display: block;
 }

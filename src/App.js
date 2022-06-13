@@ -13,6 +13,7 @@ import {
 } from "./features";
 import Mockman from "mockman-js";
 import { useTheme } from "./features/theme-context";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function App() {
   const { theme } = useTheme();

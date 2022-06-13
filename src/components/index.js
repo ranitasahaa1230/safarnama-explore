@@ -6,3 +6,4 @@ export {Toast} from "./Toast/Toast";
 export {NotFound} from "./NotFound/NotFound";
 export {Footer} from "./Footer/Footer";
 export {PrivateRoute} from "./PrivateRoute/PrivateRoute";
+export {Loader} from "./Loader/Loader";

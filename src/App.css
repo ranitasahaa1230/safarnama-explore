@@ -29,6 +29,7 @@
   --trash-color: #ff0000;
   --footer-color: #14213d;
   --shadow-color:#db8cb4;
+  --footer-hover:#370617;
 
   --border-radius: 2rem;
   --card-border-radius: 1rem;
@@ -158,7 +159,7 @@ img {
   font-size: 1.65rem;
 }
 .button-floating:hover {
-  background: var(--accent-color);
+  background: var(--footer-hover);
 }
 
 @media screen and (max-width: 1200px) {

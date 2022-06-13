@@ -16,6 +16,7 @@ const initialState = {
   userPosts: [],
   // bookmarks: [],
   sortBy: "Newest",
+  loading: false,
 };
 
 export const getAllPost = createAsyncThunk(

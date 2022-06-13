@@ -1,0 +1,25 @@
+.loader-wrapper {
+  margin: 0 30rem;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-wrapper .loading {
+  margin: 0 30rem;
+}
+
+@media screen and (max-width: 889px) {
+  .loader-wrapper {
+    height: 50vh;
+    margin: 0 15rem;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .loader-wrapper {
+    margin: 0 5rem;
+  }
+}
