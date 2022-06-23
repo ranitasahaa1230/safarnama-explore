@@ -28,7 +28,7 @@ export const MiddleGrid = () => {
     const filterByFollowing = allPosts.filter(
       (post) =>
         user.username === post.username ||
-        user.following.find((account) => account.username === post.username)
+        user.following?.find((account) => account.username === post.username)
     );
     switch (sortBy) {
       case Newest:

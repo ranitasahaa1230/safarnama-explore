@@ -21,11 +21,12 @@ export function SignUp() {
   const { showToast } = useToast();
   useDocumentTitle("SignUp");
   const [showPassword, setShowPassword] = useState(false);
+  const [confirmPassVisible, setConfirmPassVisible] = useState(false);
   const [error, setError] = useState("");
-  let from = location.state?.from?.pathname ?? "/login";
+  let from = location.state?.from?.pathname ?? "/feed";
 
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
+  const handleFormSubmit = async (signUpForm) => {
+    // event.preventDefault();
     try {
       const response = await dispatch(signUpUser(signUpForm));
       if (response?.error) {
@@ -40,7 +41,7 @@ export function SignUp() {
         "Can't SignUp the user. Recheck details and try again!",
         "error"
       );
-      setError("Passwords do not match");
+      setError("Sign up failed.");
     }
   };
 
@@ -51,7 +52,10 @@ export function SignUp() {
         <div className="button-box">
           <h3 className="toggle-btn">SIGN UP</h3>
         </div>
-        <form className="input-group" onSubmit={handleFormSubmit}>
+        <form className="input-group" onSubmit={(e) => {
+                e.preventDefault();
+                handleFormSubmit(signUpForm);
+              }}>
           <label htmlFor="firstname" className="password-label">
             First Name
           </label>
@@ -96,14 +100,16 @@ export function SignUp() {
           </label>
           <div className="visibility">
             <input
-              type={showPassword ? "text" : "password"}
+              type={`${showPassword ? "text" : "password"}`}
               className="visibility-fields"
               placeholder="Enter Password"
+              maxLength="20"
+                  minLength="6"
               value={signUpForm.password}
               onChange={(e) =>
                 setsignUpForm((form) => ({ ...form, password: e.target.value }))
               }
-              autoComplete="off"
+              // autoComplete="off"
               required
             />
             {
@@ -125,9 +131,11 @@ export function SignUp() {
           </label>
           <div className="visibility">
             <input
-              type={showPassword ? "text" : "password"}
+              type={`${confirmPassVisible ? "text" : "password"}`}
               className="visibility-fields"
               placeholder="Enter Confirm Password"
+              maxLength="20"
+                  minLength="6"
               value={signUpForm.confirmPassword}
               onChange={(e) =>
                 setsignUpForm((form) => ({
@@ -135,15 +143,15 @@ export function SignUp() {
                   confirmPassword: e.target.value,
                 }))
               }
-              autoComplete="off"
+              // autoComplete="off"
               required
             />
             {
               <span
                 className="visibility-icon"
-                onClick={() => setShowPassword((showPassword) => !showPassword)}
+                onClick={() => setConfirmPassVisible((confirmPassVisible) => !confirmPassVisible)}
               >
-                {showPassword ? (
+                {confirmPassVisible ? (
                   <i className="fa-solid fa-eye"></i>
                 ) : (
                   <i className="fa-solid fa-eye-slash"></i>
@@ -153,7 +161,7 @@ export function SignUp() {
           </div>
 
           <div className="checkbox-block">
-            <input type="checkbox" className="check-box" />
+            <input type="checkbox" className="check-box" required/>
             <span className="check-psswd">
               I agree to all terms and conditions
             </span>
